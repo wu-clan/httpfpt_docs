@@ -1,0 +1,16 @@
+{
+  "name": "automated_api_pytest_docs",
+  "version": "0.0.5",
+  "description": "docs for automated_api_pytest",
+  "main": "index.js",
+  "repository": "https://github.com/wu-clan/automated_api_pytest",
+  "author": "xiaowu",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.9"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  }
+}
