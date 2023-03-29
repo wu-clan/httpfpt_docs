@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: 
+heroImage: head.gif
 actionText: 快速了解 →
 actionLink: /note/
 features:

@@ -1,6 +1,6 @@
 module.exports = {
-    base: './automated_api_pytest_docs/',
-    dest: 'docs/.vuepress/dist',
+    // base: './automated_api_pytest_docs/',
+    dest: './docs/.vuepress/dist',
     locales: {
         '/': {
             lang: 'zh-CN',
@@ -15,7 +15,7 @@ module.exports = {
             {text: 'Gitee', link: 'https://gitee.com/wu_cl'},
         ],
         sidebar: 'auto',
-        search: false,
+        search: true,
         searchMaxSuggestions: 10,
         lastUpdated: 'Releases',
     }
