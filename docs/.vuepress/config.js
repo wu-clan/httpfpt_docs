@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/docs/',
+    base: '/automated_api_pytest_docs/',
     dest: 'docs/.vuepress/dist',
     locales: {
         '/': {

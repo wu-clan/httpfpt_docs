@@ -1,3 +1,3 @@
 # Automated Api Pytest Docs
 
-See [documentation](https://github.com/wu-clan/automated_api_pytest/docs) for more details.
+See [documentation](https://wu-clan.github.io/automated_api_pytest_docs) for more details.

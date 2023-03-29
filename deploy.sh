@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com/wu-clan/automated_api_pytest.git master
+git push -f git@github.com/wu-clan/automated_api_pytest.git master:gh-pages
 
 cd -
