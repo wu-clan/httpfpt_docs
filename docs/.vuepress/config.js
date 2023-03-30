@@ -11,8 +11,8 @@ module.exports = {
     themeConfig: {
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Github', link: 'https://github.com/wu-clan'},
-            {text: 'Gitee', link: 'https://gitee.com/wu_cl'},
+            {text: 'Github', link: 'https://github.com/wu-clan/automated_api_pytest'},
+            {text: 'Gitee', link: 'https://gitee.com/wu_cl/automated_api_pytest'},
         ],
         sidebar: 'auto',
         search: true,
