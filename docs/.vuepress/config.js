@@ -1,6 +1,6 @@
 module.exports = {
-    base: './automated_api_pytest_docs/',
-    dest: './docs/.vuepress/dist',
+    base: '/automated_api_pytest_docs/',
+    dest: 'docs/.vuepress/dist',
     locales: {
         '/': {
             lang: 'zh-CN',
