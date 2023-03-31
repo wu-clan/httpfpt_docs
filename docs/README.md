@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: head.png
+heroImage: /assets/img/head.png
 actionText: 快速了解 →
 actionLink: /note/
 features:
