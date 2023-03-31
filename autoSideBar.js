@@ -40,6 +40,7 @@ function gen_sidebar_config(dir_path, ref, parent_ref, parent_router_path) {
                     const group = {
                         title: file_or_dir_name,
                         collapsable: false,
+                        sidebarDepth: 2,
                         children: []
                     }
                     ref.push(group)
