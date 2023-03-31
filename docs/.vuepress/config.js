@@ -81,5 +81,8 @@ module.exports = {
         search: true,
         searchMaxSuggestions: 10,
         lastUpdated: "Releases",
+        markdown: {
+            lineNumbers: true
+        }
     },
 };
