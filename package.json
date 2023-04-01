@@ -7,7 +7,8 @@
   "author": "xiaowu",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.9.9"
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-zooming": "^1.1.8"
   },
   "scripts": {
     "dev": "vuepress dev docs",

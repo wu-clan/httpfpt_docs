@@ -35,11 +35,11 @@ module.exports = {
                     }
                 ]
             },
+            {text: "Gitee", link: "https://gitee.com/wu_cl/automated_api_pytest"},
             {
                 text: "Github",
                 link: "https://github.com/wu-clan/automated_api_pytest",
-            },
-            {text: "Gitee", link: "https://gitee.com/wu_cl/automated_api_pytest"}
+            }
         ],
         sidebar: [
             {
@@ -55,7 +55,7 @@ module.exports = {
                 sidebarDepth: 2
             },
             {
-                title: "测试用例数据",
+                title: "测试用例数据说明",
                 path: "/case_data/",
                 collapsable: true,
                 sidebarDepth: 2,
@@ -85,8 +85,15 @@ module.exports = {
             {
                 title: "测试用例创建",
                 path: "/case_create/",
-                collapsable: false,
-                sidebarDepth: 2
+                collapsable: true,
+                sidebarDepth: 2,
+                children: [
+                    {
+                        title: "测试用例数据实例",
+                        path: "/case_create/case_data_instance",
+                        sidebarDepth: 2
+                    }
+                ]
             },
             {
                 title: "测试报告",
@@ -101,14 +108,20 @@ module.exports = {
                 sidebarDepth: 2
             },
             {
+                title: "运行",
+                path: "/run/",
+                collapsable: false,
+                sidebarDepth: 2
+            },
+            {
                 title: "常见问题",
                 path: "/questions/",
                 collapsable: false,
                 sidebarDepth: 2
             },
             {
-                title: "运行",
-                path: "/run/",
+                title: "注意事项",
+                path: "/warnings/",
                 collapsable: false,
                 sidebarDepth: 2
             }
@@ -120,4 +133,9 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
+    plugins: [
+        [
+            'vuepress-plugin-zooming',
+        ]
+    ]
 };
