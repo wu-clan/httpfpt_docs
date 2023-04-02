@@ -89,8 +89,13 @@ module.exports = {
                 sidebarDepth: 2,
                 children: [
                     {
-                        title: "测试用例数据实例",
-                        path: "/case_create/case_data_instance",
+                        title: "数据实例",
+                        path: "/case_create/instances",
+                        sidebarDepth: 2
+                    },
+                    {
+                        title: "认证",
+                        path: "/case_create/auth",
                         sidebarDepth: 2
                     }
                 ]
