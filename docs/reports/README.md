@@ -24,20 +24,20 @@ total: 9
 
 ### Allure Report
 ---
-![allure_report](/assets/img/allure_report.jpg)
+<img :src="$withBase('/assets/img/allure_report.jpg')" alt="allure_report">
 
 ### Html Report
 ---
-![html_report](/assets/img/html_report.jpg)
+<img :src="$withBase('/assets/img/html_report.jpg')" alt="html_report">
 
 ### Ding Report
 ---
-![ding_report](/assets/img/ding_report.jpg)
+<img :src="$withBase('/assets/img/ding_report.jpg')" alt="ding_report">
 
 ### Lark Report
 ---
-![lark_report](/assets/img/lark_report.jpg)
+<img :src="$withBase('/assets/img/lark_report.jpg')" alt="lark_report">
 
 ### Email Report
 ---
-![email_report](/assets/img/email_report.jpg)
+<img :src="$withBase('/assets/img/email_report.jpg')" alt="email_report">
