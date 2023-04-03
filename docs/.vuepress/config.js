@@ -11,31 +11,31 @@ module.exports = {
     themeConfig: {
         logo: '/assets/img/head.png',
         nav: [
-            {text: "Home", link: "/"},
+            { text: "Home", link: "/" },
             {
                 text: '我的开源',
                 items: [
                     {
                         text: 'Gitee', items: [
-                            {text: 'Django Blog', link: 'https://gitee.com/wu_cl/DBlog'},
-                            {text: 'Fastapi SQLAlchemy', link: 'https://gitee.com/wu_cl/fastapi_sqlalchemy_mysql'},
-                            {text: 'Fastapi Tortoise', link: 'https://gitee.com/wu_cl/fastapi_tortoise_mysql'},
-                            {text: 'Auto Selenium UI', link: 'https://gitee.com/wu_cl/automated_ui'},
-                            {text: 'Auto Unittest Api', link: 'https://gitee.com/wu_cl/automated_api'}
+                            { text: 'Django Blog', link: 'https://gitee.com/wu_cl/DBlog' },
+                            { text: 'Fastapi SQLAlchemy', link: 'https://gitee.com/wu_cl/fastapi_sqlalchemy_mysql' },
+                            { text: 'Fastapi Tortoise', link: 'https://gitee.com/wu_cl/fastapi_tortoise_mysql' },
+                            { text: 'Auto Selenium UI', link: 'https://gitee.com/wu_cl/automated_ui' },
+                            { text: 'Auto Unittest Api', link: 'https://gitee.com/wu_cl/automated_api' }
                         ]
                     },
                     {
                         text: 'Github', items: [
-                            {text: 'Django Blog', link: 'https://github.com/wu-clan/DBlog'},
-                            {text: 'Fastapi SQLAlchemy', link: 'https://github.com/wu-clan/fastapi_sqlalchemy_mysql'},
-                            {text: 'Fastapi Tortoise', link: 'https://github.com/wu-clan/fastapi_tortoise_mysql'},
-                            {text: 'Auto Selenium UI', link: 'https://github.com/wu-clan/automated_ui'},
-                            {text: 'Auto Unittest Api', link: 'https://github.com/wu-clan/automated_api'}
+                            { text: 'Django Blog', link: 'https://github.com/wu-clan/DBlog' },
+                            { text: 'Fastapi SQLAlchemy', link: 'https://github.com/wu-clan/fastapi_sqlalchemy_mysql' },
+                            { text: 'Fastapi Tortoise', link: 'https://github.com/wu-clan/fastapi_tortoise_mysql' },
+                            { text: 'Auto Selenium UI', link: 'https://github.com/wu-clan/automated_ui' },
+                            { text: 'Auto Unittest Api', link: 'https://github.com/wu-clan/automated_api' }
                         ]
                     }
                 ]
             },
-            {text: "Gitee", link: "https://gitee.com/wu_cl/automated_api_pytest"},
+            { text: "Gitee", link: "https://gitee.com/wu_cl/automated_api_pytest" },
             {
                 text: "Github",
                 link: "https://github.com/wu-clan/automated_api_pytest",
@@ -51,6 +51,12 @@ module.exports = {
             {
                 title: "多项目？",
                 path: "/projects/",
+                collapsable: false,
+                sidebarDepth: 2
+            },
+            {
+                title: "配置文件说明",
+                path: "/config/",
                 collapsable: false,
                 sidebarDepth: 2
             },
@@ -143,4 +149,4 @@ module.exports = {
             'vuepress-plugin-zooming',
         ]
     ]
-};
+}
