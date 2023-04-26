@@ -11,22 +11,17 @@ module.exports = {
     themeConfig: {
         logo: '/assets/img/head.png',
         nav: [
-            {text: "Home", link: "/"},
+            { text: "Home", link: "/" },
             {
                 text: 'Others',
                 items: [
                     {
                         text: 'Gitee', items: [
-                            {text: 'Django Blog', link: 'https://gitee.com/wu_cl/DBlog'},
-                            {text: 'Fastapi SQLAlchemy', link: 'https://gitee.com/wu_cl/fastapi_sqlalchemy_mysql'},
-                            {text: 'Fastapi Tortoise', link: 'https://gitee.com/wu_cl/fastapi_tortoise_mysql'},
-                            {text: 'Auto Selenium UI', link: 'https://gitee.com/wu_cl/automated_ui'},
-                            {text: 'Auto Unittest Api', link: 'https://gitee.com/wu_cl/automated_api'}
+                            { text: 'Django Blog', link: 'https://gitee.com/wu_cl/DBlog' }
                         ]
                     },
                     {
                         text: 'Github', items: [
-                            {text: 'Django Blog', link: 'https://github.com/wu-clan/DBlog'},
                             {
                                 text: 'Fastapi SQLAlchemy',
                                 link: 'https://github.com/fastapi-practices/fastapi_sqlalchemy_mysql'
@@ -35,18 +30,14 @@ module.exports = {
                                 text: 'Fastapi Tortoise',
                                 link: 'https://github.com/fastapi-practices/fastapi_tortoise_mysql'
                             },
-                            {text: 'Auto Selenium UI', link: 'https://github.com/wu-clan/automated_ui'},
-                            {text: 'Auto Unittest Api', link: 'https://github.com/wu-clan/automated_api'}
+                            { text: 'Auto Selenium UI', link: 'https://github.com/wu-clan/automated_ui' },
+                            { text: 'Auto Unittest Api', link: 'https://github.com/wu-clan/automated_api' }
                         ]
                     }
                 ]
             },
-            {
-                text: "Sources", items: [
-                    {text: "Gitee", link: "https://gitee.com/wu_cl/automated_api_pytest"},
-                    {text: "Github", link: "https://github.com/wu-clan/automated_api_pytest"}
-                ]
-            }
+            { text: "About", link: "https://juejin.cn/post/7224314619867136037" },
+            { text: "Github", link: "https://github.com/wu-clan/automated_api_pytest" }
         ],
         sidebar: [
             {
