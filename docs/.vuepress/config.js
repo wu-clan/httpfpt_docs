@@ -13,7 +13,7 @@ module.exports = {
         nav: [
             {text: "Home", link: "/"},
             {
-                text: '我的开源',
+                text: 'Others',
                 items: [
                     {
                         text: 'Gitee', items: [
@@ -42,7 +42,7 @@ module.exports = {
                 ]
             },
             {
-                text: "跳转", items: [
+                text: "Sources", items: [
                     {text: "Gitee", link: "https://gitee.com/wu_cl/automated_api_pytest"},
                     {text: "Github", link: "https://github.com/wu-clan/automated_api_pytest"}
                 ]
@@ -140,6 +140,18 @@ module.exports = {
             {
                 title: "注意事项",
                 path: "/warnings/",
+                collapsable: false,
+                sidebarDepth: 2
+            },
+            {
+                title: "更新日志",
+                path: "/changes_log/",
+                collapsable: false,
+                sidebarDepth: 2
+            },
+            {
+                title: "赞赏",
+                path: "/reward/",
                 collapsable: false,
                 sidebarDepth: 2
             }

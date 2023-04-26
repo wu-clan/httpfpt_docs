@@ -1,19 +1,19 @@
-## 参数描述
+# 参数描述
 
-### project
+## project
 
 测试项目配置
 
 - `project` 指定测试项目，详情请查看：[多项目？](/projects/)
 
-### report
+## report
 
 测试报告配置
 
 - `title` 测试报告标题
 - `tester_name` 测试人员名称
 
-### mysql
+## mysql
 
 MySQL 数据库配置
 
@@ -23,7 +23,7 @@ MySQL 数据库配置
 - `password` 密码
 - `database` 需要连接的数据库名称
 
-### redis
+## redis
 
 Redis 数据库配置
 
@@ -33,7 +33,7 @@ Redis 数据库配置
 - `database` 指定数据库 [0-16]
 - `timeout` 连接超时时间
 
-### email
+## email
 
 邮件发送配置
 
@@ -45,7 +45,7 @@ Redis 数据库配置
 - `is_ssl` 是否 SSL 验证
 - `is_send_report` 是否发送邮件测试报告
 
-### ding_talk
+## ding_talk
 
 钉钉推送配置
 
@@ -54,7 +54,7 @@ Redis 数据库配置
 - `proxies.https` 请求 https 代理
 - `is_send_report` 是否发送钉钉测试报告
 
-### lark_talk
+## lark_talk
 
 飞书推送配置
 
@@ -63,7 +63,7 @@ Redis 数据库配置
 - `proxies.https` 请求 https 代理
 - `is_send_report` 是否发送飞书测试报告
   
-### request
+## request
 
 全局请求发送基础配置
 

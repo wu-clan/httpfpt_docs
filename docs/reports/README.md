@@ -1,4 +1,4 @@
-## 🔍 查看测试报告
+# 🔍 查看测试报告
 
 测试执行完毕后, 测试报告会自动生成到 report 文件夹下
 
@@ -9,8 +9,8 @@
 
 ## 测试报告相关截图
 
-### Yaml Report
----
+Yaml Report
+-
 ```yaml
 elapsed: 9.003
 error: 0
@@ -22,22 +22,22 @@ started_time: '2023-04-01 16:05:37'
 total: 9
 ```
 
-### Allure Report
----
+Allure Report
+-
 <img :src="$withBase('/assets/img/allure_report.jpg')" alt="allure_report">
 
-### Html Report
----
+Html Report
+-
 <img :src="$withBase('/assets/img/html_report.jpg')" alt="html_report">
 
-### Ding Report
----
+Ding Report
+-
 <img :src="$withBase('/assets/img/ding_report.jpg')" alt="ding_report">
 
-### Lark Report
----
+Lark Report
+-
 <img :src="$withBase('/assets/img/lark_report.jpg')" alt="lark_report">
 
-### Email Report
----
+Email Report
+-
 <img :src="$withBase('/assets/img/email_report.jpg')" alt="email_report">

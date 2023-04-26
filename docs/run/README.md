@@ -1,10 +1,10 @@
-## 🚀 如何运行测试
+# 🚀 如何运行测试
 
-### Pycharm
+## Pycharm (推荐)
 
 在 run.py 文件内部，鼠标右键执行即可
 
-### 命令行
+## 命令行
 
 请确保当前使用的 python 环境和当前框架一致，如果遇到路径问题，
 请参阅：[通用解决方法](https://www.cnblogs.com/duanweishi/p/15987693.html)
@@ -15,7 +15,7 @@
 文档说明的：[源码跳转](https://gitee.com/wu_cl/automated_api_pytest/blob/master/fastpt/run.py#L27)
 
 - `log_level`: 控制台打印输出级别, 默认"-v"
-- `case_path`: 可选参数, 指定测试用例函数, 默认为空，如果指定，则执行执行用例，否则执行全部
+- `case_path`: 可选参数, 指定测试用例, 默认为空，如果指定，则执行指定用例，否则执行全部，请遵循 pytest 用例指定规则
 - `html_report`: 是否生成 HTML 测试报告, 默认开启
 - `allure`: allure 测试报告, 默认关闭
 - `allure_clear`: 清空 allure 报告历史记录, 默认开启

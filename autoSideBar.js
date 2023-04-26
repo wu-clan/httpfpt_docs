@@ -28,7 +28,8 @@ function gen_sidebar_config(dir_path, ref, parent_ref, parent_router_path) {
                     }
                     const file = {
                         title: file_or_dir_name,
-                        path: current_router_path
+                        path: current_router_path,
+                        sidebarDepth: 2
                     }
                     ref.push(file)
                     continue

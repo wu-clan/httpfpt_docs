@@ -1,6 +1,6 @@
-## 测试用例注意事项
+# 测试用例注意事项
 
-### use_pydantic_verify
+## use__pydantic__verify
 
 在自动生成的测试用例中，请注意 `get_request_data()` 方法中的 `use_pydantic_verify` 参数的使用，
 如果你的测试数据仅仅是简单的测试验证，并不包含完整的测试数据结构，务必将它设置为 `False`, 你也可以将此

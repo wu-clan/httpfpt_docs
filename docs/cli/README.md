@@ -1,4 +1,4 @@
-## CLI 程序使用说明
+# CLI 程序使用说明
 
 CLI 程序是命令行工具，它同样是此框架的组成成分，使用 [Typer](https://typer.tiangolo.com/) 构建
 
