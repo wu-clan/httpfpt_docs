@@ -1,4 +1,8 @@
-# python接口自动化测试框架
+# Automated Api Pytest
+
+我在掘金发表了关于 `Automated Api Pytest` 的前身和由来，包括部分功能点的说明， 感兴趣
+
+的小伙伴可以一睹为快哟，[点击跳转](https://juejin.cn/post/7224314619867136037)
 
 ## 🧠 设计思路
 
