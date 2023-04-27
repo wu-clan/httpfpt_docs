@@ -1,7 +1,7 @@
 # 更新日志
 
-> 框架的更新以发版的形式进行记录，你同样可以在 [Gitee](https://gitee.com/wu_cl/automated_api_pytest/releases)
-> 或 [Github](https://github.com/wu-clan/automated_api_pytest/releases) 获取完整的英文版说明
+> 框架的更新以发版的形式进行记录，你同样可以在 [Github](https://github.com/wu-clan/automated_api_pytest/releases)
+> 获取完整的英文版说明
 
 ## v0.0.6a1 (2023-04-25)
 

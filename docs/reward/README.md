@@ -28,7 +28,7 @@
 
 ## 赞助商
 
-排名不分先后，如有遗漏，请<[在此](https://gitee.com/wu_cl/automated_api_pytest/issues)>告知
+排名不分先后，如有遗漏，请<[在此](https://github.com/wu-clan/automated_api_pytest/discussions)>告知
 
 🥇（ >= 50 ¥）
 

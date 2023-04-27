@@ -12,7 +12,7 @@
 ## 运行参数
 
 在源码中，对现有已添加的运行参数，是完全添加 RST
-文档说明的：[源码跳转](https://gitee.com/wu_cl/automated_api_pytest/blob/master/fastpt/run.py#L27)
+文档说明的：[源码跳转](https://github.com/wu-clan/automated_api_pytest/blob/9910e6b88a8555897987117d5bbe0a3e801098f7/fastpt/run.py#L27)
 
 - `log_level`: 控制台打印输出级别, 默认"-v"
 - `case_path`: 可选参数, 指定测试用例, 默认为空，如果指定，则执行指定用例，否则执行全部，请遵循 pytest 用例指定规则
@@ -24,7 +24,8 @@
 - `maxfail`: 大于0的正整数, 指定失败用例个数,到达数量上限后终止运行, 默认为0, 为0时表示此参数默认关闭
 - `x`: 如果发生失败用例, 是否终止运行, 默认关闭
 - `n`: 分布式运行, 使用"auto"表示全核, 也可指定cpu内核数量, 大于0的正整数, 默认"auto"
-- `dist`: 分布式运行方式, 默认"loadscope", 详情: [distribution](https://pytest-xdist.readthedocs.io/en/latest/distribution.html)
+- `dist`: 分布式运行方式, 默认"loadscope",
+  详情: [distribution](https://pytest-xdist.readthedocs.io/en/latest/distribution.html)
 - `strict_markers`: markers 严格模式, 对于使用了自定义 marker 的用例, 如果 marker 未在 pytest.ini 注册, 用例将报错
 - `capture`: 避免在使用输出模式为"v"和"s"时,html报告中的表格log为空的情况, 默认开启
 - `disable_warnings`: 是否关闭控制台警告信息, 默认开启

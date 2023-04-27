@@ -36,12 +36,6 @@ github:
 git clone https://github.com/wu-clan/automated_api_pytest.git
 ```
 
-gitee:
-
-```shell
-git clone https://gitee.com/wu_cl/automated_api_pytest.git
-```
-
 ## 🧑‍💻 USE / DEV
 
 > 依赖和 redis 是必需的，allure 是可选的，将运行参数 allure 设置为 False 即可关闭它

@@ -16,5 +16,4 @@
 
 更多问题请通过 Git 仓库发起 ISSUES 进行提问
 
-- [gitee issues](https://gitee.com/wu_cl/automated_api_pytest/issues)
-- [github issues](https://github.com/wu-clan/automated_api_pytest/issues)
+- [GitHub issues](https://github.com/wu-clan/automated_api_pytest/issues)
