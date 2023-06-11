@@ -1,11 +1,17 @@
 # 更新日志
 
 > 框架的更新以发版的形式进行记录，你同样可以在 [Github](https://github.com/wu-clan/httpfpt/releases)
-> 获取完整的英文版说明
+> 查看变更记录
+
+## v0.1.0a1 (2023-06-11)
+- 添加基于 github 的ci工作流
+- 添加更多 typing 提示基于 ruff 规则
+- Bump requests from 2.25.1 to 2.31.0
+- 💥 重命名项目名为 httpfpt
 
 ## v0.0.6a1 (2023-04-25)
 
-- 更新使用文档至 [automatic_api_pytest_docs](https://wu-clan.github.io/httpfpt/)
+- 更新使用文档至 [httpfpt_docs](https://wu-clan.github.io/httpfpt/)
 - 修复测试报告电子邮件附件乱码
 - 增加测试数据架构验证
 - 更新基于 black 的测试用例自动生成器
