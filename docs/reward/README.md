@@ -1,6 +1,6 @@
-# 赞助
+# 🙏🙏🙏
 
-如果 `Automated Api Pytest` 能够帮助到你，你可以通过以下二维码随意发起打赏，不胜感激；
+如果 `HttpFpt` 能够帮助到你，你可以通过以下二维码随意发起打赏，不胜感激；
 
 *请在备注或留言信息栏填写个人名称和个人地址跳转链接，以便将您加入到[赞助商](/reward/#赞助商)列表*
 
@@ -28,20 +28,20 @@
 
 ## 赞助商
 
-排名不分先后，如有遗漏，请<[在此](https://github.com/wu-clan/automated_api_pytest/discussions)>告知
+排名不分先后，如有遗漏，请<[在此](https://github.com/wu-clan/httpfpt/discussions)>告知
 
-🥇（ >= 50 ¥）
-
-- None
-
-🥈（ >= 20 ¥）
+🥇 <!-- （ >= 50 ¥） -->
 
 - None
 
-🥉（ >= 10 ¥）
+🥈 <!-- （ >= 20 ¥） -->
 
 - None
 
-🏅（others）
+🥉 <!-- （ >= 10 ¥） -->
+
+- None
+
+🏅 <!-- （others） -->
 
 - None

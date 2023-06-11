@@ -1,11 +1,11 @@
 module.exports = {
-    base: "/automated_api_pytest_docs/",
+    base: "/httpfpt_docs/",
     dest: "docs/.vuepress/dist",
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Automated Api Pytest",
-            description: "docs for automated_api_pytest",
+            title: "HttpFpt",
+            description: "documentation for httpfpt",
         },
     },
     themeConfig: {
@@ -23,11 +23,15 @@ module.exports = {
                     {
                         text: 'Github', items: [
                             {
-                                text: 'Fastapi SQLAlchemy',
+                                text: 'FastAPI Best Architecture',
+                                link: 'https://github.com/fastapi-practices/fastapi_best_architecture'
+                            },
+                            {
+                                text: 'FastAPI SQLAlchemy',
                                 link: 'https://github.com/fastapi-practices/fastapi_sqlalchemy_mysql'
                             },
                             {
-                                text: 'Fastapi Tortoise',
+                                text: 'FastAPI Tortoise',
                                 link: 'https://github.com/fastapi-practices/fastapi_tortoise_mysql'
                             },
                             { text: 'Auto Selenium UI', link: 'https://github.com/wu-clan/automated_ui' },
@@ -37,7 +41,7 @@ module.exports = {
                 ]
             },
             { text: "About", link: "https://juejin.cn/post/7224314619867136037" },
-            { text: "Github", link: "https://github.com/wu-clan/automated_api_pytest" }
+            { text: "Github", link: "https://github.com/wu-clan/httpfpt" }
         ],
         sidebar: [
             {
@@ -141,7 +145,7 @@ module.exports = {
                 sidebarDepth: 2
             },
             {
-                title: "赞赏",
+                title: "Coffee",
                 path: "/reward/",
                 collapsable: false,
                 sidebarDepth: 2

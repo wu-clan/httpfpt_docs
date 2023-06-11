@@ -12,7 +12,7 @@
 ## 运行参数
 
 在源码中，对现有已添加的运行参数，是完全添加 RST
-文档说明的：[源码跳转](https://github.com/wu-clan/automated_api_pytest/blob/9910e6b88a8555897987117d5bbe0a3e801098f7/fastpt/run.py#L27)
+文档说明的：[源码跳转](https://github.com/wu-clan/httpfpt/blob/9910e6b88a8555897987117d5bbe0a3e801098f7/fastpt/run.py#L27)
 
 - `log_level`: 控制台打印输出级别, 默认"-v"
 - `case_path`: 可选参数, 指定测试用例, 默认为空，如果指定，则执行指定用例，否则执行全部，请遵循 pytest 用例指定规则
