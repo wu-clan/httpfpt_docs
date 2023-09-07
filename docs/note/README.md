@@ -46,5 +46,10 @@ git clone https://github.com/wu-clan/httpfpt.git
     pip install -r requirements.txt
     ```
 
-2. 安装 [allure](https://www.yuque.com/poloyy/python/aiqlmi) 程序和 [Java JDK](https://adoptopenjdk.net/archive.html?variant=openjdk8&jvmVariant=hotspot)
+2. 安装 [allure](https://www.yuque.com/poloyy/python/aiqlmi)
+   程序和 [Java JDK](https://adoptopenjdk.net/archive.html?variant=openjdk8&jvmVariant=hotspot)
 3. 安装 redis 并启动服务
+
+## 📺 入门指北
+
+<BiliBili bvid="BV1k8411B7zz"/>
