@@ -2,3 +2,5 @@
 .fleet/
 /node_modules/
 docs/.vuepress/dist/
+.temp/
+.cache/

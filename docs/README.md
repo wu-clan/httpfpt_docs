@@ -1,8 +1,10 @@
 ---
 home: true
 heroImage: /assets/img/head.png
-actionText: 快速了解 →
-actionLink: /note/
+actions:
+    - text: 快速开始 >
+      link: /note/
+      type: primary
 features:
   - title: 易用性
     details: 通过 yaml 文件管理测试数据
