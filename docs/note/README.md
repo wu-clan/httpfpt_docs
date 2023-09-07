@@ -14,16 +14,16 @@
 - core/: 配置
 - data/: 测试数据
 - db/: 数据库
-- enums: 枚举类
-- schemas: 数据架构
+- enums/: 枚举类
+- schemas/: 数据架构
 - log/: 日志
 - report/: 测试报告
-- templates: 数据模板
-- test_case/: 测试项目和用例
+- templates/: 数据模板
+- testcases/: 测试项目和用例
 - utils/: 工具包
 - cli.py: CLI 程序
 - conftest.py: pytest.fixture 配置
-- pytest.ini pytest 参数配置
+- pytest.ini: pytest 参数配置
 - run.py: 主程序运行入口
 
 ## ⬇️ 下载
@@ -38,7 +38,7 @@ git clone https://github.com/wu-clan/httpfpt.git
 
 ## 🧑‍💻 USE / DEV
 
-> 依赖和 redis 是必需的，allure 是可选的，将运行参数 allure 设置为 False 即可关闭它
+> 依赖包和 redis 是必需的，allure 是可选的，将运行参数 allure 设置为 False 即可关闭它（默认开启）
 
 1. 安装依赖包:
 
@@ -46,5 +46,5 @@ git clone https://github.com/wu-clan/httpfpt.git
     pip install -r requirements.txt
     ```
 
-2. 安装 [allure](https://www.yuque.com/poloyy/python/aiqlmi) 程序
+2. 安装 [allure](https://www.yuque.com/poloyy/python/aiqlmi) 程序和 [Java JDK](https://adoptopenjdk.net/archive.html?variant=openjdk8&jvmVariant=hotspot)
 3. 安装 redis 并启动服务

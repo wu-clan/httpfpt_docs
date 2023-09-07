@@ -2,7 +2,7 @@
 
 1. 使用 [CLI](/cli/) 程序自动导入
 2. 根据 [数据结构](/case_data/) 和 [参数说明](/case_data/params_desc.md)， 手动编写用例数据文件
-   常见业务的测试用例数据示例可参阅 [用例实例](/case_create/case_data_instance.md)
+   常见业务的测试用例数据示例可参阅 [数据实例](/case_create/instance.md)
 
 ## 测试用例创建
 

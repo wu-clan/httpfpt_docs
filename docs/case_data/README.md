@@ -35,16 +35,16 @@ test_steps:
       files:
     setup:
       testcase:
+        - event_query_001
         - case_id:
           key:
           jsonpath:
-        - event_query_001
       sql:
+        - select * from xxx where xxx=xxx
         - key:
           type:
           sql:
           jsonpath:
-        - select * from xxx where xxx=xxx
       hooks:
       wait_time:
     teardown:
@@ -55,11 +55,11 @@ test_steps:
           type:
           jsonpath:
       assert:
+        - assert 200 = pm.response.get('status_code')
         - check:
           value:
           type:
           jsonpath:
-        - assert 200 = pm.response.get('status_code')
         - check:
           value:
           type:

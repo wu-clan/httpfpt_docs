@@ -14,12 +14,12 @@ config:
   
 test_steps:
   - name: 基础
-    case_id: 基础_001
+    case_id: case_001
     description: 无
     is_run: True
     request:
       method: get
-      url: https://xxx.xxx.com/
+      url: /api/v1/any
       params: 
       headers: 
       body_type: 

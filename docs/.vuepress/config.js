@@ -11,13 +11,13 @@ module.exports = {
     themeConfig: {
         logo: '/assets/img/head.png',
         nav: [
-            { text: "Home", link: "/" },
+            {text: "Home", link: "/"},
             {
                 text: 'Others',
                 items: [
                     {
                         text: 'Gitee', items: [
-                            { text: 'Django Blog', link: 'https://gitee.com/wu_cl/DBlog' }
+                            {text: 'Django Blog', link: 'https://gitee.com/wu_cl/DBlog'}
                         ]
                     },
                     {
@@ -34,14 +34,26 @@ module.exports = {
                                 text: 'FastAPI Tortoise',
                                 link: 'https://github.com/fastapi-practices/fastapi_tortoise_mysql'
                             },
-                            { text: 'Auto Selenium UI', link: 'https://github.com/wu-clan/automated_ui' },
-                            { text: 'Auto Unittest Api', link: 'https://github.com/wu-clan/automated_api' }
+                            {
+                                text: 'Auto Selenium UI',
+                                link: 'https://github.com/wu-clan/automated_ui'
+                            },
+                            {
+                                text: 'Auto Unittest Api',
+                                link: 'https://github.com/wu-clan/automated_api'
+                            }
                         ]
                     }
                 ]
             },
-            { text: "About", link: "https://juejin.cn/post/7224314619867136037" },
-            { text: "Github", link: "https://github.com/wu-clan/httpfpt" }
+            {
+                text: "About",
+                link: "https://juejin.cn/post/7224314619867136037"
+            },
+            {
+                text: "Github",
+                link: "https://github.com/wu-clan/httpfpt"
+            }
         ],
         sidebar: [
             {

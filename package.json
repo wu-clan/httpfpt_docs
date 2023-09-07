@@ -1,17 +1,17 @@
 {
   "name": "httpfpt_docs",
-  "version": "0.0.5",
+  "version": "0.1.1",
   "description": "docs for httpfpt",
   "main": "index.js",
   "repository": "https://github.com/wu-clan/httpfpt",
-  "author": "xiaowu",
+  "author": "Wu Clan",
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.9.9",
     "vuepress-plugin-zooming": "^1.1.8"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
     "build": "vuepress build docs"
   }
 }

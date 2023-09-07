@@ -30,4 +30,4 @@ bearer_token:
 - `password`: 密码
 - `headers`: 请求头
 - `token_key`: jsonpath 表达式，用于从响应中提取 token 值
-- `timeout`: 自定义当前 token 超时时间，而非 token 本身超时时间，token 会根据此时间进行缓存, 避免频繁请求 
+- `timeout`: 自定义当前 token 超时时间，而非服务器 token 本身超时时间，token 会根据此时间进行缓存, 避免频繁请求 
