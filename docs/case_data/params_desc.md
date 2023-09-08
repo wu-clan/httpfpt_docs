@@ -30,8 +30,8 @@
 | ++ url        |            str            | Y     | 请求链接，不包含域名，域名需在测试环境文件中配置                                                 |
 | ++ params     |        dict / null        | Y     | 请求/查询参数                                                                  |
 | ++ headers    |        dict / null        | Y     | 请求头，如果为空，则会应用上方配置中的请求头，如果上方也未配置，则不使用请求头                                  |
-| ++ body_type  |        str / null         | Y     | 请求数据类型: None、form、x_form、binary、graphQL、text、js、json、html、xml            |
-| ++ body       | str / dict / bytes / null | Y     | 请求体                                                                      |
+| ++ body_type  |        str / null         | Y     | 请求数据类型: None、form、x_form、binary、GraphQL、text、js、json、html、xml            |
+| ++ body       | str / bytes / dict / null | Y     | 请求体                                                                      |
 | ++ files      |        dict / null        | Y     | 请求文件上传                                                                   |
 | + setup       |        dict / null        | N     | 请求前置                                                                     |
 | ++ testcase   |        list / null        | N     | 前置 testcase，当执行测试用例时，格式应为 List\[str]，当设置当前测试执行过程中的缓存变量时，格式应为 List\[dict] |
@@ -51,13 +51,19 @@
 
 test_steps 中的 is_run 参数多种实现方式
 
-1. bool 类型值, True / False, 是否跳过执行
+1. None 值, 默认执行
+
+   ```yaml
+   is_run:  # None
+   ```
+
+2. bool 类型值, True / False, 是否跳过执行
 
     ```yaml
     is_run: True  # bool
     ```
 
-2. dict 类型值, skip + reason, 可自定义跳过执行原因
+3. dict 类型值, skip + reason, 自定义跳过执行原因
 
     ```yaml
     is_run:
@@ -65,7 +71,7 @@ test_steps 中的 is_run 参数多种实现方式
       reason: 跳过执行原因  # str
     ```
 
-3. dict 类型值, skip_if + reason, 条件为真时跳过执行
+4. dict 类型值, skip_if + reason, 条件为真时跳过执行
 
     ```yaml
     is_run:
@@ -84,16 +90,16 @@ setup 中的 testcase 参数支持两种功能
     ```yaml
     testcase:
       - event_query_001  # str
-      - 用例 case_id  # str
+      - 测试用例 case_id
     ```
 
 2. 设置当前测试用例执行前的缓存变量, 且仅供当前测试用例使用
 
     ```yaml
     testcase:
-      - case_id: 关联测试用例的 case_id  # str
+      - case_id: 测试用例 case_id  # str
         key: 变量 key  # str
-        jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例的请求返回数据集  # str
+        jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例 response 数据集  # str
     ```
 
 ### sql
@@ -122,7 +128,7 @@ setup / teardown 中的 sql 参数支持两种功能
 
 teardown 中的 extract 参数支持一种功能
 
-1. 变量提取
+- 变量提取
 
     ```yaml
     extract:
@@ -133,10 +139,13 @@ teardown 中的 extract 参数支持一种功能
 
 ### assert
 
+teardown 中的 assert 参数多种实现方式
+
 1. 常规断言：
 
-   与正常 assert 的语法格式一致，但比较值受约束, 比较值从 [response 数据集](/case_data/use_jsonpath.md) 进行取值， 并且以 pm.response.get('') 开始取值，
-   后面可以继续 .get() 方法，也可以使用其他方法，但前提是 python 可执行代码，**并且为了避免引号问题，断言脚本请使用单引号处理**,
+   与 python assert 的语法格式基本一致，但比较值受约束, 比较值从 [response 数据集](/case_data/use_jsonpath.md) 进行取值，
+   并且以 pm.response.get('') 开始取值，后面可以继续使用 .get() 方法或其他 python 可执行代码，
+   **为了避免引号问题，断言脚本请使用`英文单引号`处理**
 
     ```yaml
     assert: assert xxx 条件 pm.response.get('xxx'), '错误说明'  # str
@@ -147,6 +156,18 @@ teardown 中的 extract 参数支持一种功能
       - assert xxx 条件 pm.response.get('xxx')  # str
       - assert xxx 条件 pm.response.get('xxx').get('xxx'), '错误说明'
     ```
+
+   ::: details 扩展语法
+   
+   dirty-equals 库专属, 请不要在断言语句中带有除 dirty_equals 库以外的外部函数，仅支持简易验证操作, 使用前,
+   请阅读它的官方使用文档：[v0.6.0](https://dirty-equals.helpmanual.io/0.6/)
+   
+   E.g.:
+   
+   ```yaml:no-line-numbers
+   assert: assert pm.response.get('json').get('uuid') == IsUUID, '错误说明'  # str
+   ```
+   :::
 
 2. jsonpath 断言:
 
