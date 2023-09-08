@@ -1,10 +1,10 @@
-# 🚀 如何运行测试
+## 🚀 运行方式
 
-## Pycharm (推荐)
+### Pycharm (推荐)
 
 在 run.py 文件内部，鼠标右键选择执行即可
 
-## 命令行
+### 命令行
 
 确保当前框架 python 运行环境，如果遇到路径问题，请参阅：[通用解决方法](https://www.cnblogs.com/duanweishi/p/15987693.html)
 
@@ -12,7 +12,7 @@
 python run.py
 ```
 
-## 运行参数
+## 📖 运行参数
 
 源码中，对现有已添加的运行参数添加了 RST
 文档说明：[源码跳转](https://github.com/wu-clan/httpfpt/blob/3b6c01524fae4d1915e6bf685df21f2215a757d3/httpfpt/run.py#L51)
@@ -33,7 +33,7 @@ python run.py
 - `capture`: 避免在使用输出模式为"v"和"s"时，html报告中的表格日志为空的情况, 默认开启
 - `disable_warnings`: 关闭控制台警告信息, 默认开启
 
-## 运行方式选择
+## 🔘 运行方式选择
 
 IDE 和命令行都支持参数自定义和扩展，在 IDE 中，在 run() 方法括号内以字符串或键值表达式形式填入即可，
 

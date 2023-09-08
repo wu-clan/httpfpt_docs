@@ -4,15 +4,15 @@
 
 *请在备注或留言信息栏填写个人名称和个人地址跳转链接，以便将您加入到[赞助商](/reward/#赞助商)列表*
 
-## AliPay
+## ❤️ AliPay
 
 <img :src="$withBase('/assets/img/ali_pay.jpg')" alt="allure_report">
 
-## WeChat Pay
+## ❤️ WeChat Pay
 
 <img :src="$withBase('/assets/img/weixin_pay.jpg')" alt="allure_report">
 
-## 加密货币
+## ❤️ 加密货币
 
 **ERC20**:
 
@@ -26,7 +26,7 @@
 
 <img :src="$withBase('/assets/img/HECO_pay.jpg')" alt="allure_report">
 
-## 赞助商
+## 🏅 赞助商
 
 排名不分先后，如有遗漏，请<[在此](https://github.com/wu-clan/httpfpt/discussions)>告知
 

@@ -1,13 +1,13 @@
 ## 基础请求数据
 
-这是一个基础的请求数据实例，仅包含基础请求必填项
+这是一个基础的请求数据实例，包含基础请求必填项
 
 ```yaml
 config:
   allure:
-    epic: 基础实例
-    feature: 基础实例模块
-    story: 我是基础
+    epic: 一级说明
+    feature: 二级说明
+    story: 三级说明
   request:
     env: dev.env
   module: any

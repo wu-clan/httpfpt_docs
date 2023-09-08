@@ -1,9 +1,9 @@
-## 身份验证
+## 授权
 
 配置位于 core 目录下的 auth.yaml 文件中，只需修改配置文件，无需额外操作
 
-- `is_auth`: 是否开启自动身份验证
-- `auth_type`: 认证方式，填写 auth.yaml 文件中认证方式的键值
+- `is_auth`: 是否开启自动授权
+- `auth_type`: 授权方式，填写 auth.yaml 文件中认证方式的键值
 
 ### Bearer Token
 

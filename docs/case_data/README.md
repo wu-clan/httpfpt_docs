@@ -1,6 +1,6 @@
 ## 数据结构展示
 
-这只是一个相对比较完整的模板，参数细节请查看[参数描述](/case_data/params_desc.md)
+这只是一个相对比较完整测试用例数据模板，参数细节请查看[参数描述](/case_data/params_desc.md)
 
 ```yaml
 config:

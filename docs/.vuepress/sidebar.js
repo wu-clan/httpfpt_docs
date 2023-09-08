@@ -8,28 +8,28 @@ export const sidebar = [
         link: "/projects/",
     },
     {
-        text: "配置文件说明",
+        text: "配置文件",
         link: "/config/",
     },
     {
-        text: "测试用例数据说明",
+        text: "测试用例数据",
         link: "/case_data/",
         collapsible: true,
         children: [
             {
-                text: "参数描述",
+                text: "📝 参数描述",
                 link: "/case_data/params_desc.html",
             },
             {
-                text: "变量和钩子",
+                text: "🏪 变量和钩子",
                 link: "/case_data/vars_hooks.html",
             },
             {
-                text: "jsonpath",
+                text: "👁️ jsonpath",
                 link: "/case_data/use_jsonpath.html",
             },
             {
-                text: "断言类型",
+                text: "🔡 断言类型",
                 link: "/case_data/assert_type.html",
             }
         ]
@@ -40,11 +40,11 @@ export const sidebar = [
         collapsible: true,
         children: [
             {
-                text: "数据实例",
+                text: "📄 数据实例",
                 link: "/case_create/instances.html",
             },
             {
-                text: "认证",
+                text: "🪪 认证",
                 link: "/case_create/auth.html",
             }
         ]
