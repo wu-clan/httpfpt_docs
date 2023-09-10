@@ -171,14 +171,14 @@ teardown 中的 assert 参数多种实现方式
 
 2. jsonpath 断言:
    
-   查看断言类型说明: [type](/case_data/assert_type.md)
+   断言类型说明：[type](/case_data/assert_type.md)；JsonPath 取值范围：[source](/case_data/use_jsonpath.md#jsonpath-取值)
 
    ```yaml
    assert:
      - check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
        value: 比较值  # Any
        type: 断言类型  # str
-       jsonpath: jsonpath 表达式, 数据依赖用例的请求返回的数据集  # str
+       jsonpath: jsonpath 表达式  # str
    ```
 
 3. sql 断言:
@@ -189,5 +189,5 @@ teardown 中的 assert 参数多种实现方式
        value: 比较值  # Any
        type: 断言类型  # str
        sql: 执行 sql 查询  # str
-       jsonpath: jsonpath 表达式, 数据依赖 sql 查询结果  # str
+       jsonpath: jsonpath 表达式  # str
    ```
