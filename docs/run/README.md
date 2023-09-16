@@ -15,7 +15,7 @@ python run.py
 ## 📖 运行参数
 
 源码中，对现有已添加的运行参数添加了 RST
-文档说明：[源码跳转](https://github.com/wu-clan/httpfpt/blob/3b6c01524fae4d1915e6bf685df21f2215a757d3/httpfpt/run.py#L51)
+文档说明：[源码跳转](https://github.com/wu-clan/httpfpt/blob/8e4adf943e0dde9380a053ef08c6839dcb497613/httpfpt/run.py#L52)
 
 - `log_level`: 控制台打印输出级别, 默认"-v"
 - `case_path`: 指定测试用例函数, 默认为空，如果指定，则执行指定用例，否则执行全部
@@ -35,9 +35,9 @@ python run.py
 
 ## 🔘 运行方式选择
 
-IDE 和命令行都支持参数自定义和扩展，在 IDE 中，在 run() 方法括号内以字符串或键值表达式形式填入即可，
+Pycharm 和命令行都支持参数自定义和扩展，在代码 run() 方法括号内以字符串或键值表达式形式填入即可
 
-在 IDE 运行的好处是，它会在控制台同时打印你当前所有运行参数和转化后的 pytest 命令，此命令可直接用于命令行执行
+- Pycharm: 无需担心运行环境问题
 
-在命令行运行的好处是，如果测试用例发生意外或报错，它会得到一个完美的错误信息统计，
+- 命令行: 可能发生环境问题；测试用例运行失败时，会得到一个漂亮的错误信息统计，
 基于 [pytest-pretty](https://github.com/samuelcolvin/pytest-pretty) 构建

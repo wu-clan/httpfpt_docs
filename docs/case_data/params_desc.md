@@ -101,6 +101,10 @@ setup 中的 testcase 参数支持两种功能
         key: 变量 key  # str
         jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例 response 数据集  # str
     ```
+   
+::: warning 注意
+关联测试用例当前仅支持关联同一数据文件内存在的测试用例，暂不支持跨文件关联
+:::
 
 ### sql
 
