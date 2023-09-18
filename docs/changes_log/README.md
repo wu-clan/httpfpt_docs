@@ -1,6 +1,21 @@
-# 更新日志
+::: tip 版本更新日志
+框架的更新日志以发版的形式进行记录，你可以在 [Github](https://github.com/wu-clan/httpfpt/releases) 查看更详细的日志内容
+:::
 
-> 框架的更新以发版的形式进行记录，你同样可以在 [Github](https://github.com/wu-clan/httpfpt/releases) 查看变更记录
+## 🔖 v0.2.0a1 (2023-09-18)
+
+* 修复前后置 sql 解析和执行方法
+* 修复请求数据 assert 传输类型
+* 修复 run 方法自定义运行参数
+* 更新 jsonpath 版本为 0.82.2
+* 重构 jsonpath 实施为 python-jsonpath
+* 添加版本检测到 ci 工作流
+* 添加内部自定义异常类
+* 添加 ASCII 字符 LOGO 打印
+* 更新测试报告内日志输出格式
+* 添加运行异常时发送邮件通知
+* 重构测试用例数据缓存
+* 重构关联测试用例执行逻辑
 
 ## 🔖 v0.1.0a3 (2023-09-04)
 

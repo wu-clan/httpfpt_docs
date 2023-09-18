@@ -43,7 +43,7 @@ export const navbar = [
         ]
     },
     {
-        text: "About",
-        link: "https://juejin.cn/post/7224314619867136037"
+        text: "ByWave",
+        link: "https://user.by.icu/aff.php?aff=12215"
     }
 ]
