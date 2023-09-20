@@ -27,7 +27,7 @@
 | + is_run      |    bool / dict / null     | Y     | [是否执行](params_desc.md#is-run)                                                              |
 | + request     |           dict            | Y     | 请求参数                                                                                       |
 | ++ method     |            str            | Y     | 请求方式，不限大小写：get、post、put、delete、patch                                                       |
-| ++ url        |            str            | Y     | 请求链接，不包含域名，域名需在测试环境文件中配置，域名定义方式：`http=` 优先于 `HTTP=`                                        |
+| ++ url        |            str            | Y     | 请求链接，不包含域名，域名需在测试环境文件中配置，域名定义方式：`host=` 优先于 `HOST=`                                        |
 | ++ params     |        dict / null        | Y     | 请求/查询参数                                                                                    |
 | ++ headers    |        dict / null        | Y     | 请求头，如果为空，则会应用统一配置中的请求头，如果统一配置中未设置，则请求头为空，如果同时设置，则会应用当前请求头                                  |
 | ++ body_type  |        str / null         | Y     | 请求数据类型，支持：form、x_form、binary、GraphQL、text、js、json、html、xml                                 |

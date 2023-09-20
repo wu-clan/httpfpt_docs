@@ -68,4 +68,4 @@ allure 测试报告默认使用 allure-pytest
 
 当前视频非最新演示，可能与当前版本有所出入，仅供参考
 
-<BiliBili bvid="BV1k8411B7zz"/>
+<BiliBili bvid="BV1jh4y1a7ic"/>
