@@ -50,16 +50,16 @@ export const sidebar = [
         ]
     },
     {
-        text: "测试报告",
-        link: "/reports/",
-    },
-    {
         text: "CLI",
         link: "/cli/",
     },
     {
         text: "运行",
         link: "/run/",
+    },
+    {
+        text: "测试报告",
+        link: "/reports/",
     },
     {
         text: "常见问题",
