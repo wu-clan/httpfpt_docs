@@ -2,8 +2,7 @@
 
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/wu-clan/httpfpt/ci.yml?logo=github)](https://github.com/wu-clan/httpfpt/actions)
 [![GitHub](https://img.shields.io/github/license/wu-clan/httpfpt)](https://github.com/wu-clan/httpfpt/blob/master/LICENSE)
-[![Static Badge](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)](https://www.python.org/downloads/)
-[![GitHub tag (with filter)](https://img.shields.io/github/v/tag/wu-clan/httpfpt)](https://github.com/wu-clan/httpfpt/tags)
+[![Static Badge](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/downloads/)
 [![GitHub release (with filter)](https://img.shields.io/github/v/release/wu-clan/httpfpt)](https://github.com/wu-clan/httpfpt/releases)
 
 基于 HTTP 请求的快速数据驱动 pytest 接口自动化测试框架
