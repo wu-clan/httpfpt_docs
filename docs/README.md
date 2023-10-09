@@ -7,7 +7,7 @@ actions:
       type: primary
 features:
   - title: 易用性
-    details: 通过 yaml 文件管理测试数据
+    details: 通过 yaml 文件统一管理测试数据
   - title: 灵活性
     details: 多方位参数定义，自动参数校验，0编码，只需编写测试用例数据文件
   - title: 实用性
