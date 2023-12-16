@@ -57,7 +57,7 @@ git clone https://github.com/wu-clan/httpfpt.git
 
    [Docker](https://hub.docker.com/_/redis)
 
-3. 安装 mysql 并创建一个任意名称数据库，同步修改 conf.toml 中的数据库配置
+3. 安装 mysql 数据库（可选，如果你需要执行 SQL 操作）
 
    [Windows / Linux / macOS](https://dev.mysql.com/downloads/installer/)
 
