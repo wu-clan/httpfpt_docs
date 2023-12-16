@@ -160,7 +160,7 @@ teardown 中的 assert 参数多种实现方式
    ::: details 扩展语法
 
    dirty-equals 库专属, 请不要在断言语句中带有除 dirty_equals 库以外的外部函数，仅支持简易验证操作, 使用前,
-   请阅读它的官方使用文档：[v0.6.0](https://dirty-equals.helpmanual.io/0.6/)
+   请阅读它的官方使用文档：[v0.7.1](https://dirty-equals.helpmanual.io/latest/)
 
    E.g.:
 
@@ -171,7 +171,9 @@ teardown 中的 assert 参数多种实现方式
 
 2. jsonpath 断言:
 
-   断言类型说明：[type](/case_data/assert_type.md)；JsonPath 取值范围：[source](/case_data/use_jsonpath.md#jsonpath-取值)
+   断言类型说明：[assert type](/case_data/assert_type.md)
+
+   JsonPath 取值范围：[source](/case_data/use_jsonpath.md#jsonpath-取值)
 
    ```yaml
    assert:

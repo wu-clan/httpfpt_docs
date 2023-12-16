@@ -28,6 +28,7 @@
 
 ## ❔ 其他问题
 
-请确保你已经完全阅读了本文档所有内容，如果仍有问题请通过 GitHub 创建 ISSUES，我将尽快回复
+请确保你已经完全阅读了本文档所有内容，如仍有问题，请创建 ISSUES 或加入 Telegram 社区
 
 - [New issues](https://github.com/wu-clan/httpfpt/issues)
+- [Telergam](https://t.me/+ZlPhIFkPp7E4NGI1)

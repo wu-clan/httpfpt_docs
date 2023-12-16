@@ -20,7 +20,7 @@
 
 <img :src="$withBase('/assets/img/ERC20_pay.jpg')" alt="allure_report" style="width:520px;border-radius:6%;">
 
-**HECO / BEP20**:
+**BEP20**:
 
 0xE844012f173b7fdf3D87f783FdF67e665AF116C0
 
@@ -30,18 +30,14 @@
 
 排名不分先后，如有遗漏，请<[在此](https://github.com/wu-clan/httpfpt/discussions)>告知
 
-🥇 <!-- （ >= 50 ¥ ） -->
+**🥇🥇🥇** <!-- （ >= 50 ¥ ） -->
 
 - None
 
-🥈 <!-- （ >= 20 ¥ ） -->
+**🥈🥈🥈** <!-- （ >= 20 ¥ ） -->
 
 - None
 
-🥉 <!-- （ >= 10 ¥ ） -->
-
-- None
-
-🏅 <!-- （ < 10 ¥ ） -->
+**🥉🥉🥉** <!-- （ >= 5 ¥ ） -->
 
 - None
