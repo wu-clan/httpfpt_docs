@@ -12,13 +12,14 @@
 
 ## ❓ 调试 yaml 数据
 
-在 `run()` 方法中，有一个 `pydantic_verify` 参数，它的作用是在运行前对所有 yaml 数据结构进行快速校验，如果检验异常，则会抛出异常
+在 `run()` 方法中，有一个 `pydantic_verify` 参数，它的作用是在运行前对所有 yaml 数据结构进行快速校验，如果检验异常，则会抛出异常，如果看不懂
+pydantic 错误信息，建议设置 `pydantic_verify=False`
 
 ## ❓ 调试用例
 
 你只需在 `run()` 方法中添加指定测试路径参数，E.g. `run(case_path='test_demo.py::test_demo')`
 
-注意：由于数据驱动，它不能单独指定某条用例数据，最简单的方式是，注释 yaml 数据或使用第三方接口工具进行接口调试
+注意：由于数据驱动，它不能单独指定某条用例数据，最简单的方式是，注释 yaml 测试数据或使用第三方接口工具进行接口调试
 
 ## ❓ 添加运行参数
 
@@ -28,7 +29,7 @@
 
 ## ❔ 其他问题
 
-请确保你已经完全阅读了本文档所有内容，如仍有问题，请创建 ISSUES 或加入 Telegram 社区
+请确保你已经完全阅读了本文档所有内容，如仍有问题，请创建 ISSUES 或加入 Telegram 社区咨询
 
-- [New issues](https://github.com/wu-clan/httpfpt/issues)
-- [Telergam](https://t.me/+ZlPhIFkPp7E4NGI1)
+- [GitHub new issues](https://github.com/wu-clan/httpfpt/issues)
+- [Telegram](https://t.me/+ZlPhIFkPp7E4NGI1)

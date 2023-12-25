@@ -1,8 +1,12 @@
+::: tip 配置文件
+/core/conf.toml
+:::
+
 ## 🔧 project
 
 测试项目配置
 
-- `project` 指定测试项目，详情请查看：[多项目？](/projects/)
+- `project` 指定测试项目，详情请查看：[多项目？](/projects/README.md)
 
 ## 🔧 report
 
@@ -63,7 +67,7 @@ Redis 数据库配置
   
 ## 🔧 request
 
-全局请求发送基础配置
+请求发送默认基础配置
 
 - `timeout` 请求超时时间
 - `verify` 请求验证

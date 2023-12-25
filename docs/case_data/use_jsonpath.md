@@ -13,7 +13,7 @@
 
 辅助工具：
 
-- 非完全标准[在线验证](https://www.jsonpath.cn/)
+- [非完全标准在线验证](https://www.jsonpath.cn/)
 
 ## response 数据集
 
@@ -26,9 +26,9 @@
   "elapsed": "请求耗时",
   "headers": "响应请求头",
   "cookies": "响应 cookies",
-  "json": "响应数据 > json 格式",
-  "content": "响应数据 > 字节格式",
-  "text": "响应数据 > 文本格式",
+  "json": "响应 json",
+  "content": "响应字节",
+  "text": "响应文本",
   "stat": {
     "execute_time": "请求执行开始时间"
   }
@@ -37,8 +37,12 @@
 
 ## jsonpath 取值
 
-对于接口请求， jsonpath 取值源等同于 response 数据集
+::: warning
+不要直接根据接口响应结果进行 jsonpath 取值
+:::
 
-对于 SQL 语句， jsonpath 取值源取决于 sql 执行结果
+对于接口请求，jsonpath 取值源依赖于 [response 数据集](#response-数据集)：
+
+对于 SQL 语句，jsonpath 取值源依赖于 SQL 执行结果
 
 详情：[jsonpath 断言](/case_data/params_desc.md#assert)

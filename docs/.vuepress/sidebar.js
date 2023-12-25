@@ -74,7 +74,7 @@ export const sidebar = [
         link: "/changes_log/",
     },
     {
-        text: "☕️☕️☕️",
+        text: "❤️❤️❤️",
         link: "/reward/",
     }
 ];
