@@ -1,6 +1,8 @@
 ## 数据结构展示
 
-这只是一个相对比较完整测试用例数据模板，参数细节请查看[参数描述](/case_data/params_desc.md)
+:::warning
+这只是一个相对比较完整的测试用例数据演示，参数细节请查看[参数描述](/case_data/params_desc.md)
+:::
 
 ```yaml
 config:
@@ -34,36 +36,37 @@ test_steps:
       body:
       files:
     setup:
-      testcase:
-        - event_query_001
-        - case_id:
+      - testcase: 
+      - testcase:
+          case_id:
           key:
           jsonpath:
-      sql:
-        - select * from xxx where xxx=xxx
-        - key:
+      - sql: SELECT * FROM xxx WHERE xxx=xxx
+      - sql: 
+          key:
           type:
           sql:
           jsonpath:
-      hooks:
-      wait_time:
+      - hook:
+      - wait_time:
     teardown:
-      sql:
-      hooks:
-      extract:
-        - key:
+      - sql:
+      - hooks:
+      - extract:
+          key:
           type:
           jsonpath:
-      assert:
-        - assert 200 = pm.response.get('status_code')
-        - check:
+      - assert: assert 200 = pm.response.get('status_code')
+      - assert:
+          check:
           value:
           type:
           jsonpath:
-        - check:
+      - assert:
+          check:
           value:
           type:
           sql:
           jsonpath:
-      wait_time:
+      - wait_time:
 ```

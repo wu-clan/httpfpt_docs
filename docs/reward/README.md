@@ -4,15 +4,15 @@
 
 请在备注或留言信息栏填写个人名称和个人地址跳转链接，以便将您加入[赞助商列表](#🏅-赞助商)
 
-## 🧧 AliPay
+## AliPay
 
 <img :src="$withBase('/assets/img/ali_pay.jpg')" alt="allure_report" style="width:520px;margin-top:20px;border-radius:6%;">
 
-## 🧧 WeChat Pay
+## WeChat Pay
 
 <img :src="$withBase('/assets/img/weixin_pay.jpg')" alt="allure_report" style="width:520px;margin-top:20px;border-radius:6%;">
 
-## 🧧 加密货币
+## 加密货币
 
 **ERC20**:
 
@@ -26,9 +26,13 @@
 
 <img :src="$withBase('/assets/img/HECO_pay.jpg')" alt="allure_report" style="width:520px;border-radius:6%;">
 
-## 🏅 赞助商
+## 赞助商
 
 排名不分先后，如有遗漏，请<[在此](https://t.me/+ZlPhIFkPp7E4NGI1)>告知
+
+**🏅🏅🏅** <!-- ( >= 100 ¥ ) -->
+
+- None
 
 **🥇🥇🥇** <!-- （ >= 50 ¥ ） -->
 

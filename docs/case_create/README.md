@@ -6,5 +6,5 @@
 
 ## 测试用例创建
 
-1. 通过 [CLI](/cli/readme.md) 程序自动生成测试用例，注意修改配置文件 project 参数
+1. 通过 [CLI](/cli/readme.md) 程序自动生成测试用例，格外注意配置文件 [project](/projects/README.md) 参数
 2. 自定义测试用例，当然你可以编写常规~~单元~~测试用例，可参阅 [Test Demo](https://github.com/wu-clan/httpfpt/blob/master/httpfpt/testcases/test_project/test_api.py)

@@ -1,4 +1,4 @@
-## 了解 JsonPath
+## JsonPath 引导
 
 官方文档：
 
@@ -8,6 +8,8 @@
 框架内部依赖：
 
 - [python-jsonpath](https://github.com/jg-rp/python-jsonpath)
+
+JsonPath 语法：
 - [语法实现](https://jg-rp.github.io/python-jsonpath/syntax/)
 - [语法差异](https://jg-rp.github.io/python-jsonpath/syntax/#notable-differences)
 
@@ -35,14 +37,26 @@
 }
 ```
 
-## jsonpath 取值
+## JsonPath 取值
 
 ::: warning
-不要直接根据接口响应结果进行 jsonpath 取值
+不要直接根据接口响应结果进行 JsonPath 取值
+
+如果不会使用 JsonPath，先移步至 [JsonPath引导](#jsonpath-引导) 进行了解
 :::
 
-对于接口请求，jsonpath 取值源依赖于 [response 数据集](#response-数据集)：
+- 接口请求：
+    
+  \> JsonPath 取值依赖 [response 数据集](#response-数据集)，也就是说，接口响应数据将放置在响应集中，JsonPath 表达式根应为数据集；
+  
+  ```yaml:no-line-numbers
+  # examples
+  jsonpath: $.url  # 获取接口响应地址
+  jsonpath: $.json.xxx  # 获取接口响应 json 中的数据
+  ...
+  ```
+- SQL 查询：
+ 
+  \> JsonPath 取值依赖于 SQL 执行结果
 
-对于 SQL 语句，jsonpath 取值源依赖于 SQL 执行结果
-
-详情：[jsonpath 断言](/case_data/params_desc.md#assert)
+- [JsonPath 断言](/case_data/params_desc.md#assert)

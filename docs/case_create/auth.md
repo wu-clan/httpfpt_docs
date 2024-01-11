@@ -1,13 +1,13 @@
-## 授权
-
+:::tip
 配置位于 core 目录下的 auth.yaml 文件中，只需修改配置文件，无需额外操作
+:::
 
 - `is_auth`: 是否开启自动授权
 - `auth_type`: 授权方式，填写 auth.yaml 文件中认证方式的键值
 
 ### Bearer Token
 
-Token 验证，自动添加至每个请求的请求头中
+JWT 认证，自动添加至每个请求的请求头中
 
 ::: warning
 如果在请求数据中手动填入了 token，它将被更新为当前 token 值

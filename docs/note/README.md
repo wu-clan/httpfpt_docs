@@ -1,3 +1,10 @@
+:::warning
+欢迎加入我们的[社区](https://t.me/+ZlPhIFkPp7E4NGI1)，在社区进行提问前，请先完全阅读当前所有文档，文档十分全面，
+不要随意发起提问，否则我会认为你未阅读文档，并不提供任何帮助
+
+如果 HttpFpt 能够帮助到你，你可以向 HttpFpt 随意发起 [`打赏`](/reward/README.md)，不胜感激；
+:::
+
 # HttpFpt
 
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/wu-clan/httpfpt/ci.yml?logo=github)](https://github.com/wu-clan/httpfpt/actions)

@@ -33,16 +33,16 @@
 | ++ body_type  |        str / null         | Y     | 请求数据类型，支持：form、x_form、binary、GraphQL、text、js、json、html、xml                                                                  |
 | ++ body       | str / bytes / dict / null | Y     | 请求体                                                                                                                         |
 | ++ files      |        dict / null        | Y     | 请求文件上传，类似于在 postman 中使用 form-data 上传文件；需要将 body 中的文件上传参数在此定义，并删除 body 中的文件上传参数，类型为 Dict\[str, str] / Dict\[str, List\[str]] |
-| + setup       |        dict / null        | N     | 请求前置                                                                                                                        |
-| ++ testcase   |        list / null        | N     | [前置关联测试用例](params_desc.md#testcase)，执行关联测试用例时，格式为 List\[str]，设置关联测试用例变量时，格式为 List\[dict]                                    |
-| ++ sql        |        list / null        | N     | [前置 sql](params_desc.md#sql)，执行 sql 语句时，格式为 List\[str]，变量提取时，格式为 List\[dict]                                                |  |
-| ++ hooks      |        list / null        | N     | 前置函数，调用钩子函数，格式为 List\[str]                                                                                                  |
+| + setup       |        list / null        | N     | 请求前置                                                                                                                        |
+| ++ testcase   |     str / dict / null     | N     | [前置关联测试用例](params_desc.md#testcase)                                                                                         |
+| ++ sql        |     str / dict / null     | N     | [前置 sql](params_desc.md#sql)                                                                                                |  |
+| ++ hook       |        str / null         | N     | 前置函数                                                                                                                        |
 | ++ wait_time  |        int / null         | N     | 请求前等待时间，单位：秒                                                                                                                |
-| + teardown    |        dict / null        | N     | 请求后置                                                                                                                        |
-| ++ sql        |        list / null        | N     | 后置 sql，同前置                                                                                                                  |
-| ++ hooks      |        list / null        | N     | 后置函数，同前置                                                                                                                    |
-| ++ extract    |        list / null        | N     | [变量提取](params_desc.md#extract), 格式为 List\[dict]                                                                             |
-| ++ assert     |     str / list / null     | N     | [高级断言](params_desc.md#assert)                                                                                               |
+| + teardown    |        list / null        | N     | 请求后置                                                                                                                        |
+| ++ sql        |     str / dict / null     | N     | 后置 sql                                                                                                                      |
+| ++ hook       |        str / null         | N     | 后置函数                                                                                                                        |
+| ++ extract    |        dict / null        | N     | [变量提取](params_desc.md#extract)                                                                                              |
+| ++ assert     |     str / dict / null     | N     | [高级断言](params_desc.md#assert)                                                                                               |
 | ++ wait_time  |        int / null         | N     | 请求后等待时间，单位：秒                                                                                                                |
 
 ## 参数附加说明
@@ -75,11 +75,29 @@ test_steps 中的 is_run 参数多种实现方式
 
     ```yaml
     is_run:
-      skip_if:
+      skip_if: # list
         - ${timeout} == None  # str
         - python 表达式
       reason: 跳过执行原因  # str
     ```
+
+## 请求前后置附加说明
+
+在请求前后置数据定义中，一条数据就相当于一个动作，支持定义多个相同的动作，测试将按照定义顺序依次执行
+
+```yaml
+setup:
+  - hook: xxx
+  - testcase: xxx
+  - hook: xxx
+  - sql: xxx
+teardown:
+  - sql: xxx
+  - extract: xxx
+  - sql: xxx
+  - assert: xxx
+```
+
 
 ### testcase
 
@@ -88,18 +106,16 @@ setup 中的 testcase 参数支持两种功能
 1. 执行关联测试用例
 
     ```yaml
-    testcase:
-      - event_query_001  # str
-      - 测试用例 case_id
+    testcase: event_query_001  # str
     ```
 
-2. [设置关联测试用例变量](vars_hooks.md#变量替换规则)
+2. [设置关联测试用例变量](vars_hooks.md#变量表达式)
 
     ```yaml
     testcase:
-      - case_id: 测试用例 case_id  # str
-        key: 变量 key  # str
-        jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例 response 数据集  # str
+      case_id: 测试用例 case_id  # str
+      key: 变量 key  # str
+      jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例 response 数据集  # str
     ```
 
 ### sql
@@ -109,19 +125,17 @@ setup / teardown 中的 sql 参数支持两种功能
 1. 执行 sql 语句
 
     ```yaml
-    sql:
-      - select * from xxx where xxx=xxx  # str
-      - select ...
+    sql: select * from xxx where xxx=xxx  # str
     ```
 
 2. 变量提取
 
     ```yaml
     sql:
-      - key: 变量 key  # str
-        type: 变量类型：env / global / cache  # str
-        sql: 执行 sql 查询  # str
-        jsonpath: 值 value, jsonpath 表达式, 数据依赖 sql 查询结果  # str
+      key: 变量 key  # str
+      type: 变量类型：env / global / cache  # str
+      sql: 执行 sql 查询  # str
+      jsonpath: 值 value, jsonpath 表达式, 数据依赖 sql 查询结果  # str
     ```
 
 ### extract
@@ -132,9 +146,9 @@ teardown 中的 extract 参数支持一种功能
 
     ```yaml
     extract:
-      - key: 变量 key  # str
-        type: 变量类型：env / global / cache  # str
-        jsonpath: 值 value, jsonpath 表达式, 数据依赖 response 数据集  # str
+      key: 变量 key  # str
+      type: 变量类型：env / global / cache  # str
+      jsonpath: 值 value, jsonpath 表达式, 数据依赖 response 数据集  # str
     ```
 
 ### assert
@@ -150,13 +164,6 @@ teardown 中的 assert 参数多种实现方式
     ```yaml
     assert: assert xxx 条件 pm.response.get('xxx'), '错误说明'  # str
     ```
-
-    ```yaml
-    assert:
-      - assert xxx 条件 pm.response.get('xxx')  # str
-      - assert xxx 条件 pm.response.get('xxx').get('xxx'), '错误说明'
-    ```
-
    ::: details 扩展语法
 
    dirty-equals 库专属, 请不要在断言语句中带有除 dirty_equals 库以外的外部函数，仅支持简易验证操作, 使用前,
@@ -169,27 +176,27 @@ teardown 中的 assert 参数多种实现方式
    ```
    :::
 
-2. jsonpath 断言:
+2. jsonpath 断言（非常规断言）:
 
-   断言类型说明：[assert type](/case_data/assert_type.md)
+   - 断言类型 -> [Assert](/case_data/assert_type.md)
 
-   JsonPath 取值源：[source](/case_data/use_jsonpath.md#jsonpath-取值)
+   - JsonPath 取值 -> [JsonPath](/case_data/use_jsonpath.md#JsonPath-取值)
 
    ```yaml
    assert:
-     - check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
-       value: 比较值  # Any
-       type: 断言类型  # str
-       jsonpath: jsonpath 表达式  # str
+     check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
+     value: 比较值  # Any
+     type: 断言类型  # str
+     jsonpath: jsonpath 表达式  # str
    ```
 
-3. sql 断言:
+3. sql 断言（非常规断言）:
 
    ```yaml
    assert:
-     - check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
-       value: 比较值  # Any
-       type: 断言类型  # str
-       sql: 执行 sql 查询  # str
-       jsonpath: jsonpath 表达式  # str
+     check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
+     value: 比较值  # Any
+     type: 断言类型  # str
+     sql: 执行 sql 查询  # str
+     jsonpath: jsonpath 表达式  # str
    ```
