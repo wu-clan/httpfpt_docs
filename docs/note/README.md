@@ -64,7 +64,7 @@ git clone https://github.com/wu-clan/httpfpt.git
 
    [Docker](https://hub.docker.com/_/redis)
 
-3. 安装 mysql 数据库（可选，如果你需要执行 SQL 操作）
+3. 安装 mysql 数据库（可选，如果你需要本地数据库）
 
    [Windows / Linux / macOS](https://dev.mysql.com/downloads/installer/)
 

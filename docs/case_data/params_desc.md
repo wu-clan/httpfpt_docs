@@ -156,7 +156,7 @@ setup / teardown 中的 sql 参数支持两种功能
 
    ```yaml
    - sql:
-       key: gtr ID
+       key: gtr_ID
        type: cache
        sql: SELECT o.id FROM onetime AS o WHERE name = 'gtr';
        jsonpath: $.id
