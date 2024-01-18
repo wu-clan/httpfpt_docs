@@ -25,7 +25,7 @@ export const sidebar = [
                 link: "/case_data/vars_hooks.html",
             },
             {
-                text: "👁️ jsonpath",
+                text: "👁️ JsonPath",
                 link: "/case_data/use_jsonpath.html",
             },
             {
@@ -72,9 +72,5 @@ export const sidebar = [
     {
         text: "更新日志",
         link: "/changes_log/",
-    },
-    {
-        text: "❤ Sponsors ❤",
-        link: "/reward/",
     }
 ];

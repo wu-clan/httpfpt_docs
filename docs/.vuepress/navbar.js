@@ -55,6 +55,10 @@ export const navbar = [
         ]
     },
     {
+        text: "Sponsor",
+        link: "https://wu-clan.github.io/sponsor/"
+    },
+    {
         text: "ByWave",
         link: "https://user.by.icu/aff.php?aff=12215"
     },

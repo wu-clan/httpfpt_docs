@@ -47,7 +47,7 @@ JsonPath 语法：
 
 - 接口请求：
     
-  \> JsonPath 取值依赖 [response 数据集](#response-数据集)，也就是说，接口响应数据将放置在响应集中，JsonPath 表达式根应为数据集；
+  JsonPath 取值依赖 [response 数据集](#response-数据集)，也就是说，接口响应数据将放置在响应集中，JsonPath 表达式根应为数据集；
   
   ```yaml:no-line-numbers
   # examples
@@ -57,6 +57,6 @@ JsonPath 语法：
   ```
 - SQL 查询：
  
-  \> JsonPath 取值依赖于 SQL 执行结果
+  JsonPath 取值依赖于 SQL 执行结果
 
 - [JsonPath 断言](/case_data/params_desc.md#assert)

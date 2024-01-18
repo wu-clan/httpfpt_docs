@@ -83,7 +83,8 @@ test_steps 中的 is_run 参数多种实现方式
 
 ## 请求前后置附加说明
 
-在请求前后置数据定义中，一条数据就相当于一个动作，支持定义多个相同的动作，测试将按照定义顺序依次执行
+在请求前后置数据定义中，一条数据就相当于一个动作，支持定义多个相同的动作，测试将按照定义顺序依次执行，当动作数量大于 0 时，setup /
+teardown 都必须是 List 格式
 
 ```yaml
 setup:
@@ -98,105 +99,164 @@ teardown:
   - assert: xxx
 ```
 
-
 ### testcase
 
 setup 中的 testcase 参数支持两种功能
 
 1. 执行关联测试用例
 
-    ```yaml
-    testcase: event_query_001  # str
-    ```
+   ```yaml
+   - testcase: 测试用例 case_id  # value: str
+   ```
+
+   E.g.:
+
+   ```yaml
+   - testcase: event_query_001
+   ```
 
 2. [设置关联测试用例变量](vars_hooks.md#变量表达式)
 
-    ```yaml
-    testcase:
-      case_id: 测试用例 case_id  # str
-      key: 变量 key  # str
-      jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例 response 数据集  # str
-    ```
+   ```yaml
+   - testcase:
+       case_id: 测试用例 case_id  # str
+       key: 变量 key  # str
+       jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例 response 数据集  # str
+   ```
 
+   E.g.:
+
+   ```yaml
+   - testcase:
+       case_id: event_query_002
+       key: rcode
+       jsonpath: $.status_code
+   ```
 ### sql
 
 setup / teardown 中的 sql 参数支持两种功能
 
 1. 执行 sql 语句
 
-    ```yaml
-    sql: select * from xxx where xxx=xxx  # str
-    ```
+   ```yaml
+   - sql: SELECT * FROM xxx WHERE xxx=xxx  # value: str
+   ```
 
 2. 变量提取
 
-    ```yaml
-    sql:
-      key: 变量 key  # str
-      type: 变量类型：env / global / cache  # str
-      sql: 执行 sql 查询  # str
-      jsonpath: 值 value, jsonpath 表达式, 数据依赖 sql 查询结果  # str
-    ```
+   ```yaml
+   - sql:
+       key: 变量 key  # str
+       type: 变量类型：env / global / cache  # str
+       sql: 执行 sql 查询  # str
+       jsonpath: 值 value, jsonpath 表达式, 数据依赖 sql 查询结果  # str
+   ```
+
+   E.g.:
+
+   ```yaml
+   - sql:
+       key: gtr ID
+       type: cache
+       sql: SELECT o.id FROM onetime AS o WHERE name = 'gtr';
+       jsonpath: $.id
+   ```
 
 ### extract
 
-teardown 中的 extract 参数支持一种功能
-
 - 变量提取
+   
+   ```yaml
+   - extract:
+       key: 变量 key  # str
+       type: 变量类型：env / global / cache  # str
+       jsonpath: 值 value, jsonpath 表达式, 数据依赖 response 数据集  # str
+   ```
 
-    ```yaml
-    extract:
-      key: 变量 key  # str
-      type: 变量类型：env / global / cache  # str
-      jsonpath: 值 value, jsonpath 表达式, 数据依赖 response 数据集  # str
-    ```
+   E.g.: 
+
+   ```yaml
+   - extract:
+       key: test_cache
+       type: cache
+       jsonpath: $.status_code
+   ```
 
 ### assert
 
-teardown 中的 assert 参数多种实现方式
+teardown 中的 assert 参数支持多种实现方式
 
 1. 常规断言：
 
    与 python assert 的语法格式基本一致，但比较值受约束, 比较值从 [response 数据集](/case_data/use_jsonpath.md) 进行取值，
-   并且以 pm.response.get('') 开始取值，后面可以继续使用 .get() 方法或其他 python 可执行代码，
-   **为了避免引号问题，断言脚本请使用`英文单引号`处理**
+   并且以 `pm.response.get('')` 语法开始取值，后面可以继续使用 .get() 方法或其他 python 可执行代码，
+   为了避免引号问题，断言脚本内必须使用`英文单引号`处理
 
-    ```yaml
-    assert: assert xxx 条件 pm.response.get('xxx'), '错误说明'  # str
-    ```
+   ```yaml
+   - assert: assert 预期 条件 pm.response.get('xxx'), '错误说明'  # value: str
+   ```
+   
+   E.g.:
+
+   ```yaml
+   - assert: assert 200 == pm.response.get('status_code')
+   - assert: assert 'postId' not in str(pm.response.get('content')), 'No content'
+   ```
+   
    ::: details 扩展语法
 
-   dirty-equals 库专属, 请不要在断言语句中带有除 dirty_equals 库以外的外部函数，仅支持简易验证操作, 使用前,
-   请阅读它的官方使用文档：[v0.7.1](https://dirty-equals.helpmanual.io/latest/)
+   dirty-equals 库专属, 不要在断言语句中带有除 dirty_equals 库以外的外部函数，仅支持简易验证操作, 在使用前,
+   务必阅读它的官方使用文档：[v0.7.1](https://dirty-equals.helpmanual.io/latest/)
 
    E.g.:
 
    ```yaml:no-line-numbers
-   assert: assert pm.response.get('json').get('uuid') == IsUUID, '错误说明'  # str
+   - assert: assert pm.response.get('json').get('uuid') == IsUUID, 'UUID 类型错误'
    ```
    :::
 
 2. jsonpath 断言（非常规断言）:
 
-   - 断言类型 -> [Assert](/case_data/assert_type.md)
+   - 断言类型 -> [Assert Types](/case_data/assert_type.md)
 
    - JsonPath 取值 -> [JsonPath](/case_data/use_jsonpath.md#JsonPath-取值)
 
    ```yaml
-   assert:
-     check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
-     value: 比较值  # Any
-     type: 断言类型  # str
-     jsonpath: jsonpath 表达式  # str
+   - assert:
+       check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
+       value: 比较值  # Any
+       type: 断言类型  # str
+       jsonpath: jsonpath 表达式  # str
    ```
 
+   E.g.:
+
+   ```yaml
+   - assert:
+       check: 检查接口链接
+       value: https://api.anonfiles.com/upload
+       type: str_eq
+       jsonpath: $.url
+   ```
+   
 3. sql 断言（非常规断言）:
 
    ```yaml
-   assert:
-     check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
-     value: 比较值  # Any
-     type: 断言类型  # str
-     sql: 执行 sql 查询  # str
-     jsonpath: jsonpath 表达式  # str
+   - assert:
+       check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
+       value: 比较值  # Any
+       type: 断言类型  # str
+       sql: 执行 sql 查询  # str
+       jsonpath: jsonpath 表达式  # str
+   ```
+
+   E.g.:
+
+   ```yaml
+   - assert:
+       check: 
+       value: 8848
+       type: eq
+       sql: SELECT p.name FROM phone p WHERE material = ‘钛金’;
+       jsonpath: $.name
    ```

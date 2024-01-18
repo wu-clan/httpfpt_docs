@@ -19,4 +19,6 @@ CLI 程序架构已经初步完成，但是一些功能方面还待完善，尤�
    python cli.py --help
    ```
 
+   <img :src="$withBase('/assets/img/CLI.jpg')" alt="CLI">
+
 3. 根据帮助说明, 进行其他操作
