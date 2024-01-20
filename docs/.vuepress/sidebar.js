@@ -72,5 +72,9 @@ export const sidebar = [
     {
         text: "更新日志",
         link: "/changes_log/",
+    },
+    {
+        text: "Sponsor",
+        link: "https://wu-clan.github.io/sponsor/"
     }
 ];

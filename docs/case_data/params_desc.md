@@ -36,11 +36,11 @@
 | + setup       |        list / null        | N     | 请求前置                                                                                                                        |
 | ++ testcase   |     str / dict / null     | N     | [前置关联测试用例](params_desc.md#testcase)                                                                                         |
 | ++ sql        |     str / dict / null     | N     | [前置 sql](params_desc.md#sql)                                                                                                |  |
-| ++ hook       |        str / null         | N     | 前置函数                                                                                                                        |
+| ++ hook       |        str / null         | N     | [前置钩子函数](vars_hooks.md#hook-钩子函数)                                                                                           |
 | ++ wait_time  |        int / null         | N     | 请求前等待时间，单位：秒                                                                                                                |
 | + teardown    |        list / null        | N     | 请求后置                                                                                                                        |
-| ++ sql        |     str / dict / null     | N     | 后置 sql                                                                                                                      |
-| ++ hook       |        str / null         | N     | 后置函数                                                                                                                        |
+| ++ sql        |     str / dict / null     | N     | [后置 sql](params_desc.md#sql)                                                                                                |
+| ++ hook       |        str / null         | N     | [后置钩子函数](vars_hooks.md#hook-钩子函数)                                                                                           |
 | ++ extract    |        dict / null        | N     | [变量提取](params_desc.md#extract)                                                                                              |
 | ++ assert     |     str / dict / null     | N     | [高级断言](params_desc.md#assert)                                                                                               |
 | ++ wait_time  |        int / null         | N     | 请求后等待时间，单位：秒                                                                                                                |
@@ -83,7 +83,8 @@ test_steps 中的 is_run 参数多种实现方式
 
 ## 请求前后置附加说明
 
-在请求前后置数据定义中，一条数据就相当于一个动作，支持定义多个相同的动作，测试将按照定义顺序依次执行，当动作数量大于 0 时，setup /
+在请求前后置数据定义中，一条数据就相当于一个动作，支持定义多个相同的动作，测试将按照定义顺序依次执行，当动作数量大于 0
+时，setup /
 teardown 都必须是 List 格式
 
 ```yaml
@@ -115,7 +116,7 @@ setup 中的 testcase 参数支持两种功能
    - testcase: event_query_001
    ```
 
-2. [设置关联测试用例变量](vars_hooks.md#变量表达式)
+2. 设置[关联测试用例变量](vars_hooks.md#变量表达式)
 
    ```yaml
    - testcase:
@@ -132,6 +133,7 @@ setup 中的 testcase 参数支持两种功能
        key: rcode
        jsonpath: $.status_code
    ```
+
 ### sql
 
 setup / teardown 中的 sql 参数支持两种功能
@@ -165,7 +167,7 @@ setup / teardown 中的 sql 参数支持两种功能
 ### extract
 
 - 变量提取
-   
+
    ```yaml
    - extract:
        key: 变量 key  # str
@@ -173,7 +175,7 @@ setup / teardown 中的 sql 参数支持两种功能
        jsonpath: 值 value, jsonpath 表达式, 数据依赖 response 数据集  # str
    ```
 
-   E.g.: 
+  E.g.:
 
    ```yaml
    - extract:
@@ -195,14 +197,14 @@ teardown 中的 assert 参数支持多种实现方式
    ```yaml
    - assert: assert 预期 条件 pm.response.get('xxx'), '错误说明'  # value: str
    ```
-   
+
    E.g.:
 
    ```yaml
    - assert: assert 200 == pm.response.get('status_code')
    - assert: assert 'postId' not in str(pm.response.get('content')), 'No content'
    ```
-   
+
    ::: details 扩展语法
 
    dirty-equals 库专属, 不要在断言语句中带有除 dirty_equals 库以外的外部函数，仅支持简易验证操作, 在使用前,
@@ -217,9 +219,9 @@ teardown 中的 assert 参数支持多种实现方式
 
 2. jsonpath 断言（非常规断言）:
 
-   - 断言类型 -> [Assert Types](/case_data/assert_type.md)
+    - 断言类型 -> [Assert Types](/case_data/assert_type.md)
 
-   - JsonPath 取值 -> [JsonPath](/case_data/use_jsonpath.md#JsonPath-取值)
+    - JsonPath 取值 -> [JsonPath Get Values](/case_data/use_jsonpath.md#JsonPath-取值)
 
    ```yaml
    - assert:
@@ -238,7 +240,7 @@ teardown 中的 assert 参数支持多种实现方式
        type: str_eq
        jsonpath: $.url
    ```
-   
+
 3. sql 断言（非常规断言）:
 
    ```yaml

@@ -1,16 +1,10 @@
 ## 变量定义
 
-- 常规变量
+以下三种变量统称为常规变量
 
-  以下三种变量统称为常规变量
-
-    - global: 全局变量，仅在 data 目录下的 `global_vars.yaml` 文件中以键值对形式进行定义
-    - env: 环境变量，在测试用例依赖的环境文件中以键值对的形式进行定义
-    - cache: 缓存变量，在同一 `python包` 下运行测试用例时，在系统内存中定义
-
-- hook（钩子函数）
-
-  仅在 data 目录下的 hooks.py 文件中定义，根据定义结构在用例数据文件中使用
+- global: 全局变量，仅在 data 目录下的 `global_vars.yaml` 文件中以键值对形式进行定义
+- env: 环境变量，在测试用例依赖的环境文件中以键值对的形式进行定义
+- cache: 缓存变量，在同一 `python包` 下运行测试用例时，在系统内存中定义
 
 ## 变量存储
 
@@ -24,35 +18,51 @@
 
 ## 变量表达式
 
-命名规则: `a-zA-Z_`
+::: tip
+变量命名规则: `a-zA-Z_`
+:::
 
 - 常规变量：全局可用
 
-   ```text
-   ${var} 或 $var
-   ```
+  ```text
+  ${var} 或 $var
+  ```
 
-- [关联测试用例变量](params_desc.md#testcase)：仅对当前单个测试用例可用
+- 关联测试用例变量：仅对当前单个测试用例可用
 
-   ```text
-   ^{var} 或 ^var
-   ```
-
-- hook：全局可用
-
-   ```text
-   ${func()}
-   ```
+  ```text
+  ^{var} 或 ^var
+  ```
+  ```yaml
+  # E.g.:
+  setup:
+    - testcase:
+        case_id: event_query_002
+        key: r_code
+        jsonpath: $.json.status
+  teardown:
+    - assert: assert ^{r_code} == pm.response.get('json').get('status')
+  ```
 
 - SQL 专属变量：仅在 SQL 语句中可用
 
-   ```text
-   :{var} 或 :var
-   ```
+  ```text
+  :{var} 或 :var
+  ```
+  ```yaml
+  # E.g.:
+  setup:
+    - sql:
+        key: gtr_ID
+        type: cache
+        sql: SELECT o.id FROM onetime AS o WHERE name = 'gtr';
+        jsonpath: $.id
+    - sql: SELECT a.b FROM c WHERE x = ':{gtr_ID}';
+  ```
 
 ## 变量替换逻辑
 
-::: warning
+::: tip
 变量替换逻辑与变量语法密切相关
 :::
 
@@ -75,3 +85,21 @@
 
   此变量为特殊变量，仅在 SQL 被执行时才进行变量替换，如果在此之前，进行了 SQL 设置变量，这会很有帮助（比如，你执行了一条插入
   SQL，然后将插入 SQL 新增的 ID 设置为变量，此时，你就可以精准的对插入数据进行额外操作），变量替换时的优先级与常规变量相同
+
+## hook（钩子函数）
+
+仅在 data 目录下的 hooks.py 文件中定义
+
+在测试用例前后置 hook 参数下定义时，只执行代码, 在其他地方使用时, 将执行代码并替换为返回值
+
+- hook：全局可用
+
+  ```text
+  ${func()}
+  ```
+  ```yaml
+  # E.g.:
+  description: 测试 hook，时间：${current_time()}
+  setup:
+    - hook: ${current_time()}
+  ```
