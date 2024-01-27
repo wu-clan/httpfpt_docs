@@ -20,6 +20,7 @@ config:
     proxies:
       http:
       https:
+    retry:
   module:
 
 test_steps:
@@ -27,6 +28,7 @@ test_steps:
     case_id:
     description:
     is_run:
+    retry:
     request:
       method:
       url:
