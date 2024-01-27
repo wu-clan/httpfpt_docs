@@ -55,15 +55,19 @@ export const navbar = [
         ]
     },
     {
-        text: "Sponsor",
-        link: "https://wu-clan.github.io/sponsor/"
-    },
-    {
         text: "ByWave",
         link: "https://user.by.icu/aff.php?aff=12215"
     },
     {
+        text: "Sponsor",
+        link: "https://wu-clan.github.io/sponsor/"
+    },
+    {
         text: "Telegram",
         link: "https://t.me/+ZlPhIFkPp7E4NGI1"
+    },
+    {
+        text: "QQ",
+        link: "https://pd.qq.com/s/8rwhzt4ox"
     }
 ]
