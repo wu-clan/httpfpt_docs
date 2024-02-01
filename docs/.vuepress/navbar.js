@@ -63,11 +63,7 @@ export const navbar = [
         link: "https://wu-clan.github.io/sponsor/"
     },
     {
-        text: "Telegram",
-        link: "https://t.me/+ZlPhIFkPp7E4NGI1"
-    },
-    {
-        text: "QQ",
-        link: "https://pd.qq.com/s/8rwhzt4ox"
+        text: "WeChat / QQ",
+        link: "https://github.com/wu-clan"
     }
 ]
