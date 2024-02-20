@@ -1,4 +1,4 @@
-:::warning 🙏🙏🙏
+::: tip 🙏🙏🙏
 欢迎加入我们的[交流群](https://github.com/wu-clan)
 
 如果 `HttpFpt` 能够帮助到你，你可以通过 [Sponsor](https://wu-clan.github.io/sponsor/) 链接随意发起打赏，不胜感激；
