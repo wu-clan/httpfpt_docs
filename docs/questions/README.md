@@ -32,4 +32,3 @@ pydantic 错误信息，建议设置 `pydantic_verify=False`
 请确保你已经完全阅读了本文档所有内容，如仍有问题，请创建 ISSUES 或加入 Telegram 社区咨询
 
 - [GitHub new issues](https://github.com/wu-clan/httpfpt/issues)
-- [Telegram](https://t.me/+ZlPhIFkPp7E4NGI1)

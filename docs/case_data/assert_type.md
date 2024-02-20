@@ -1,7 +1,7 @@
 ## 类型说明
 
 ::: tip 提示
-仅适用于非常规断言方式，断言方式请查看 [assert](/case_data/params_desc.md#assert) 参数
+仅适用于非常规断言方式，断言方式请查看 [assert](/case_data/README.md#assert) 参数
 :::
 
 - `eq`: 预期结果与实际结果相等

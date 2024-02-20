@@ -59,4 +59,4 @@ JsonPath 语法：
  
   JsonPath 取值依赖于 SQL 执行结果
 
-- [JsonPath 断言](/case_data/params_desc.md#assert)
+- [JsonPath 断言](/case_data/README.md#assert)

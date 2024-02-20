@@ -1,7 +1,7 @@
 ## 测试用例数据创建
 
 1. 使用 [CLI](/cli/readme.md) 程序自动导入
-2. 根据 [数据结构](/case_data/readme.md) 和 [参数说明](/case_data/params_desc.md)
+2. 根据 [数据结构](/case_data/readme.md) 和 [参数说明](/case_data/README.md)
    ，手动编写用例数据文件，基础测试用例数据示例可参阅 [数据实例](/case_create/instance.md)
 
 ## 测试用例创建

@@ -17,10 +17,6 @@ export const sidebar = [
         collapsible: true,
         children: [
             {
-                text: "📝 参数描述",
-                link: "/case_data/params_desc.html",
-            },
-            {
                 text: "🏪 变量和钩子",
                 link: "/case_data/vars_hooks.html",
             },
