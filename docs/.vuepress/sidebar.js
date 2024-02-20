@@ -70,7 +70,7 @@ export const sidebar = [
         link: "/changes_log/",
     },
     {
-        text: "Sponsor",
+        text: "❤️❤️❤️",
         link: "https://wu-clan.github.io/sponsor/"
     }
 ];
