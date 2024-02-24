@@ -254,7 +254,7 @@ teardown 中的 assert 参数支持多种实现方式
        check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
        type: 断言类型  # str
        value: 预期值  # Any
-       jsonpath: jsonpath 表达式，用于从请求响应取值  # str
+       jsonpath: jsonpath 表达式，用于从 response 数据集取值  # str
    ```
 
    E.g.:
@@ -289,14 +289,15 @@ teardown 中的 assert 参数支持多种实现方式
        jsonpath: $.name
    ```
 
-4. jsonschema 断言（非常规断言）:
+4. [jsonschema](https://json-schema.org/) 断言（非常规断言）:
+
+   此断言方式会直接验证请求响应结果（接口成功响应时返回的 json 数据）
 
    ```yaml
    - assert:
        check: 断言说明 / 错误信息  # str / None
        type: jsonschema  # 固定值
-       jsonschema: jsonschema 表达式：https://json-schema.org/  # dict 
-       jsonpath: jsonpath 表达式，用于从请求响应取值  # str
+       jsonschema: jsonschema 表达式  # dict
    ```
 
    E.g.:
@@ -313,10 +314,11 @@ teardown 中的 assert 参数支持多种实现方式
            productId:
              description: The unique identifier for a product
              type: integer
-       jsonpath: $.name
    ```
    
-   jsonschema 表达式以 json 格式编写可能更加直观，但不要在 yaml 文件中以 json 格式定义！    
+   jsonschema 表达式以 json 格式编写可能更加直观，但不要在 yaml 文件中以 json 格式定义！
+
+   可以选择直接将整个测试用例数据以 json 文件格式编写！
 
    ```json
    {
@@ -329,12 +331,11 @@ teardown 中的 assert 参数支持多种实现方式
             "type": "object",
             "properties": {
                 "productId": {
-                    "description": "The unique identifier for a product",
-                    "type": "integer"
+                    "type": "integer",
+                    "description": "The unique identifier for a product"
                 }
             }
-        },
-        "jsonpath": "$.name"
+        }
      }
    }
    ```
