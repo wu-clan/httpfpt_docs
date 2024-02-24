@@ -1,5 +1,5 @@
 ::: tip
-测试数据支持 Yaml 和 Json 两种文件格式定义，它们是完全兼容的
+测试数据支持 Yaml 和 Json 两种文件格式定义，它们是完全兼容的，但是请不要在 Yaml 文件格式内以 Json 格式定义数据！
 
 详情请查看：[test_project / case_data_files](https://github.com/wu-clan/httpfpt/tree/master/httpfpt/data/test_data/test_project)
 :::
@@ -27,6 +27,7 @@
 | +++ https     |        str / null         | Y / Y | https 代理                                                                                                                    |
 | ++ retry      |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                         |
 | + module      |            str            |   Y   | 用例所属模块                                                                                                                      |
+| + is_run      |    bool / dict / null     |   Y   | [是否执行](#is-run)                                                                                                             |
 | test_steps    |        list / dict        |   Y   | 测试步骤，多条测试用例时，务必使用 List\[dict] 格式                                                                                            |
 | + name        |            str            |   Y   | 测试用例名称                                                                                                                      |
 | + case_id     |            str            |   Y   | 测试用例唯一 id，建议使用蛇形命名法                                                                                                         |
@@ -35,9 +36,10 @@
 | + retry       |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用统一配置中的 retry                                                                                   |
 | + request     |           dict            |   Y   | 请求参数                                                                                                                        |
 | ++ method     |            str            |   Y   | 请求方式，必须大写：GET、POST、PUT、DELETE、PATCH                                                                                         |
-| ++ url        |            str            |   Y   | 请求链接，不包含域名，域名需在测试环境文件中配置，域名定义方式：`host=` 优先于 `HOST=`                                                                         |
+| ++ url        |            str            |   Y   | 请求链接，不包含域名时，域名需在测试环境文件中配置，域名定义方式：`host=` 优先于 `HOST=`；如果是完整链接，将不做任何处理                                                        |
 | ++ params     |        dict / null        |   Y   | 请求/查询参数                                                                                                                     |
 | ++ headers    |        dict / null        |   Y   | 请求头，如果为空，则会应用统一配置中的请求头，如果统一配置中也为空，则根据 `body_type` 自动解析，如果同时设置，则会应用当前请求头                                                     |
+| ++ cookies    |        dict / null        |   Y   | 请求发送时携带的 cookies                                                                                                            |
 | ++ body_type  |        str / null         |   Y   | 请求数据类型，支持：form、x_form、binary、GraphQL、text、js、json、html、xml                                                                  |
 | ++ body       | str / bytes / dict / null |   Y   | 请求体                                                                                                                         |
 | ++ files      |        dict / null        |   Y   | 请求文件上传，类似于在 postman 中使用 form-data 上传文件；需要将 body 中的文件上传参数在此定义，并删除 body 中的文件上传参数，类型为 Dict\[str, str] / Dict\[str, List\[str]] | |
@@ -57,7 +59,9 @@
 
 ### is_run
 
-test_steps 中的 is_run 参数多种实现方式
+config 和 test_steps 中的 is_run 参数有多种实现方式
+
+⚠️ config 中如果设置此参数，如果条件成立，将跳过执行当前文件下所有测试用例
 
 1. None 值, 默认执行
 
@@ -110,7 +114,7 @@ teardown:
 
 ### testcase
 
-setup 中的 testcase 参数支持两种功能
+setup 中的 testcase 参数支持三种功能
 
 1. 执行关联测试用例
 
@@ -129,9 +133,9 @@ setup 中的 testcase 参数支持两种功能
    ```yaml
    - testcase:
        case_id: 测试用例 case_id  # str
-       response:  # dict
-         key: 变量 key  # str
-         jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例 response 数据集  # str
+       response:  # list
+         - key: 变量 key  # str
+           jsonpath: 值 value, jsonpath 表达式, 数据依赖关联测试用例 response 数据集  # str
    ```
 
    E.g.:
@@ -140,8 +144,20 @@ setup 中的 testcase 参数支持两种功能
    - testcase:
        case_id: event_query_002
        response:
-         key: rcode
-         jsonpath: $.status_code
+         - key: rcode
+           jsonpath: $.status_code
+   ```
+
+3. 更新关联测试用例请求数据
+
+   当与 response 参数同时存在时，变量提取源将变为更新请求数据后的请求响应集
+
+   ```yaml
+   - testcase:
+       case_id: 测试用例 case_id  # str
+       request: # list
+         - value: 要更新的值  # Any
+           jsonpath: 需要进行更新或新增值的 jsonpath 表达式，用于数据更新或新增定位，表达式正则：r'^\$\.[a-zA-Z]+(?:\.[a-zA-Z]+)*$'
    ```
 
 ### sql
@@ -237,8 +253,8 @@ teardown 中的 assert 参数支持多种实现方式
    - assert:
        check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
        type: 断言类型  # str
-       value: 比较值  # Any
-       jsonpath: jsonpath 表达式  # str
+       value: 预期值  # Any
+       jsonpath: jsonpath 表达式，用于从请求响应取值  # str
    ```
 
    E.g.:
@@ -257,9 +273,9 @@ teardown 中的 assert 参数支持多种实现方式
    - assert:
        check: 断言说明 / 错误信息, 为空时，将展示内部定义信息  # str / None
        type: 断言类型  # str
-       value: 比较值  # Any
+       value: 预期值  # Any
        sql: 执行 sql 查询  # str
-       jsonpath: jsonpath 表达式  # str
+       jsonpath: jsonpath 表达式，用于从 sql 查询结果取值  # str
    ```
 
    E.g.:
@@ -279,8 +295,8 @@ teardown 中的 assert 参数支持多种实现方式
    - assert:
        check: 断言说明 / 错误信息  # str / None
        type: jsonschema  # 固定值
-       jsonschema: https://json-schema.org/  # dict
-       jsonpath: jsonpath 表达式  # str
+       jsonschema: jsonschema 表达式：https://json-schema.org/  # dict 
+       jsonpath: jsonpath 表达式，用于从请求响应取值  # str
    ```
 
    E.g.:
@@ -299,6 +315,9 @@ teardown 中的 assert 参数支持多种实现方式
              type: integer
        jsonpath: $.name
    ```
+   
+   jsonschema 表达式以 json 格式编写可能更加直观，但不要在 yaml 文件中以 json 格式定义！    
+
    ```json
    {
      "assert": {
@@ -318,4 +337,14 @@ teardown 中的 assert 参数支持多种实现方式
         "jsonpath": "$.name"
      }
    }
+   ```
+
+5. 正则断言（非常规断言）:
+
+   ```yaml
+   - assert:
+       check: 断言说明 / 错误信息  # str / None
+       type: re  # 固定值
+       pattern: 正则表达式  # str 
+       jsonpath: jsonpath 表达式，用于从请求响应取值  # str
    ```

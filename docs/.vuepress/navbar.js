@@ -56,11 +56,7 @@ export const navbar = [
     },
     {
         text: "ByWave",
-        link: "https://user.by.icu/aff.php?aff=12215"
-    },
-    {
-        text: "Sponsor",
-        link: "https://wu-clan.github.io/sponsor/"
+        link: "https://user.by.ltd/aff.php?aff=12215"
     },
     {
         text: "WeChat / QQ",

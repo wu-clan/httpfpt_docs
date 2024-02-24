@@ -38,8 +38,9 @@
   setup:
     - testcase:
         case_id: event_query_002
-        key: r_code
-        jsonpath: $.json.status
+        response:
+          - key: r_code
+            jsonpath: $.json.status
   teardown:
     - assert: assert ^{r_code} == pm.response.get('json').get('status')
   ```
