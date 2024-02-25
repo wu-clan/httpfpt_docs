@@ -12,6 +12,21 @@ export const sidebar = [
         link: "/config/",
     },
     {
+        text: "测试用例创建",
+        link: "/case_create/",
+        collapsible: true,
+        children: [
+            {
+                text: "📄 数据实例",
+                link: "/case_create/instances.html",
+            },
+            {
+                text: "🪪 认证",
+                link: "/case_create/auth.html",
+            }
+        ]
+    },
+    {
         text: "测试用例数据",
         link: "/case_data/",
         collapsible: true,
@@ -27,21 +42,6 @@ export const sidebar = [
             {
                 text: "🔡 断言类型",
                 link: "/case_data/assert_type.html",
-            }
-        ]
-    },
-    {
-        text: "测试用例创建",
-        link: "/case_create/",
-        collapsible: true,
-        children: [
-            {
-                text: "📄 数据实例",
-                link: "/case_create/instances.html",
-            },
-            {
-                text: "🪪 认证",
-                link: "/case_create/auth.html",
             }
         ]
     },

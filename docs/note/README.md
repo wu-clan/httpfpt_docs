@@ -77,6 +77,7 @@ allure 测试报告默认使用 allure-pytest
 
 ## 📺 入门指北
 
-当前视频非最新版本，可能与当前版本有所出入，仅供参考
+当前视频可能与当前版本有所出入，仅供参考
 
 <BiliBili bvid="BV1jh4y1a7ic"/>
+<BiliBili bvid="BV1by421q7Yf"/>

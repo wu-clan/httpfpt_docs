@@ -245,9 +245,9 @@ teardown 中的 assert 参数支持多种实现方式
 
 2. jsonpath 断言（非常规断言）:
 
-    - 断言类型 -> [Assert Types](/case_data/assert_type.md)
-
-    - JsonPath 取值 -> [JsonPath Get Values](/case_data/use_jsonpath.md#JsonPath-取值)
+    - [断言类型](/case_data/assert_type.md)
+    - [JsonPath 取值](/case_data/use_jsonpath.md#JsonPath-取值)
+    - [response 数据集](/case_data/use_jsonpath.md)
 
    ```yaml
    - assert:
