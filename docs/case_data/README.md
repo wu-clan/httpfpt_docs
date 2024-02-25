@@ -342,6 +342,8 @@ teardown 中的 assert 参数支持多种实现方式
 
 5. 正则断言（非常规断言）:
 
+   - [response 数据集](/case_data/use_jsonpath.md)
+
    ```yaml
    - assert:
        check: 断言说明 / 错误信息  # str / None
