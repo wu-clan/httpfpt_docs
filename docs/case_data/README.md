@@ -1,7 +1,7 @@
-::: tip
+::: warning
 测试数据支持 Yaml 和 Json 两种文件格式定义，它们是完全兼容的，但是请不要在 Yaml 文件格式内以 Json 格式定义数据！
 
-详情请查看：[test_project / case_data_files](https://github.com/wu-clan/httpfpt/tree/master/httpfpt/data/test_data/test_project)
+实例请查看：[test_project / case_data_files](https://github.com/wu-clan/httpfpt/tree/master/httpfpt/data/test_data/test_project)
 :::
 
 ## 参数说明
