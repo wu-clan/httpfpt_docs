@@ -37,11 +37,6 @@
   虽然此变量不可全局使用，但依然不要与其他变量名进行重复命名
   :::
 
-- SQL 变量
-
-  此变量为特殊变量，仅在 SQL 被执行时才进行变量替换，如果在此之前，进行了 SQL 设置变量，这会很有帮助（比如，你执行了一条插入
-  SQL，然后将插入 SQL 新增的 ID 设置为变量，此时，你就可以精准的对插入数据进行额外操作），变量替换时的优先级与常规变量相同
-
 ## 变量表达式
 
 ::: tip
@@ -82,22 +77,6 @@
             jsonpath: $.json.status
   teardown:
     - assert: assert ^{r_code} == pm.response.get('json').get('status')
-  ```
-
-- SQL 专属变量：仅在 SQL 语句中可用
-
-  ```text
-  :{var} 或 :var
-  ```
-  ```yaml
-  # E.g.:
-  setup:
-    - sql:
-        key: gtr_ID
-        type: cache
-        sql: SELECT o.id FROM onetime AS o WHERE name = 'gtr';
-        jsonpath: $.id
-    - sql: SELECT a.b FROM c WHERE x = ':{gtr_ID}';
   ```
 
 ## hook（钩子函数）
