@@ -43,6 +43,10 @@ export const navbar = [
                         link: 'https://github.com/fastapi-practices/fastapi_chatgpt'
                     },
                     {
+                        text: 'FastAPI OAuth2',
+                        link: 'https://github.com/fastapi-practices/fastapi_oauth20'
+                    },
+                    {
                         text: 'Auto Selenium UI',
                         link: 'https://github.com/wu-clan/automated_ui'
                     },
@@ -53,6 +57,10 @@ export const navbar = [
                 ]
             }
         ]
+    },
+    {
+        text: "☕☕☕",
+        link: "https://wu-clan.github.io/sponsor/"
     },
     {
         text: "ByWave",

@@ -1,59 +1,61 @@
 ::: warning
 测试数据支持 Yaml 和 Json 两种文件格式定义，它们是完全兼容的，但是请不要在 Yaml 文件格式内以 Json 格式定义数据！
 
-实例请查看：[test_project / case_data_files](https://github.com/wu-clan/httpfpt/tree/master/httpfpt/data/test_data/test_project)
+实例：[test_project / case_data_files](https://github.com/wu-clan/httpfpt/tree/master/httpfpt/data/test_data/test_project)
 :::
 
 ## 参数说明
 
-是否必填列中 `Y / Y` 表示如果父级填写则必须填写
+键值中的一个 `-` 代表两个空格
+
+必填列中的 `Y / Y` 表示如果父级填写则必须填写
 
 | 参数            |            类型             |  必填   | 说明                                                                                                                          |
 |:--------------|:-------------------------:|:-----:|:----------------------------------------------------------------------------------------------------------------------------|
 | config        |           dict            |   Y   | 当前数据文件中所有测试用例的"统一配置"，默认应用到当前文件内的所有测试用例                                                                                      |
-| + allure      |           dict            |   Y   | allure 测试报告配置                                                                                                               |
-| ++ epic       |            str            |   Y   | allure epic                                                                                                                 |
-| ++ feature    |            str            |   Y   | allure feature                                                                                                              |
-| ++ story      |            str            |   Y   | allure story                                                                                                                |
-| ++ severity   |        str / null         |   N   | allure severity：severity、critical、normal、minor、trivial                                                                      |
-| + request     |           dict            |   Y   | 请求参数                                                                                                                        |
-| ++ env        |            str            |   Y   | 测试环境，位于 core/run_env/ 目录下的文件名，必须以 `.env` 结尾                                                                                 |
-| ++ headers    |        dict / null        |   N   | 请求头                                                                                                                         |
-| ++ timeout    |        int / null         |   N   | 请求超时，用于测试用例接口请求超时时长，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                    |
-| ++ verify     |        bool / null        |   N   | 请求验证，用于测试用例接口请求验证，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
-| ++ redirects  |        bool / null        |   N   | 重定向，用于测试用例接口请求重定向，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
-| ++ proxies    |        dict / null        |   N   | 请求代理，用于测试用例接口请求代理，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
-| +++ http      |        str / null         | Y / Y | http 代理                                                                                                                     |
-| +++ https     |        str / null         | Y / Y | https 代理                                                                                                                    |
-| ++ retry      |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                         |
-| + module      |            str            |   Y   | 用例所属模块                                                                                                                      |
-| + is_run      |    bool / dict / null     |   Y   | [是否执行](#is-run)                                                                                                             |
+| - allure      |           dict            |   Y   | allure 测试报告配置                                                                                                               |
+| -- epic       |            str            |   Y   | allure epic                                                                                                                 |
+| -- feature    |            str            |   Y   | allure feature                                                                                                              |
+| -- story      |            str            |   Y   | allure story                                                                                                                |
+| -- severity   |        str / null         |   N   | allure severity：severity、critical、normal、minor、trivial                                                                      |
+| - request     |           dict            |   Y   | 请求参数                                                                                                                        |
+| -- env        |            str            |   Y   | 测试环境，位于 core/run_env/ 目录下的文件名，必须以 `.env` 结尾                                                                                 |
+| -- headers    |        dict / null        |   N   | 请求头                                                                                                                         |
+| -- timeout    |        int / null         |   N   | 请求超时，用于测试用例接口请求超时时长，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                    |
+| -- verify     |        bool / null        |   N   | 请求验证，用于测试用例接口请求验证，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
+| -- redirects  |        bool / null        |   N   | 重定向，用于测试用例接口请求重定向，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
+| -- proxies    |        dict / null        |   N   | 请求代理，用于测试用例接口请求代理，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
+| --- http      |        str / null         | Y / Y | http 代理                                                                                                                     |
+| --- https     |        str / null         | Y / Y | https 代理                                                                                                                    |
+| -- retry      |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                         |
+| - module      |            str            |   Y   | 用例所属模块                                                                                                                      |
+| - is_run      |    bool / dict / null     |   N   | [是否执行](#is-run)                                                                                                             |
 | test_steps    |        list / dict        |   Y   | 测试步骤，多条测试用例时，务必使用 List\[dict] 格式                                                                                            |
-| + name        |            str            |   Y   | 测试用例名称                                                                                                                      |
-| + case_id     |            str            |   Y   | 测试用例唯一 id，建议使用蛇形命名法                                                                                                         |
-| + description |            str            |   Y   | 测试用例描述                                                                                                                      |
-| + is_run      |    bool / dict / null     |   Y   | [是否执行](#is-run)                                                                                                             |
-| + retry       |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用统一配置中的 retry                                                                                   |
-| + request     |           dict            |   Y   | 请求参数                                                                                                                        |
-| ++ method     |            str            |   Y   | 请求方式，必须大写：GET、POST、PUT、DELETE、PATCH                                                                                         |
-| ++ url        |            str            |   Y   | 请求链接，不包含域名时，域名需在测试环境文件中配置，域名定义方式：`host=` 优先于 `HOST=`；如果是完整链接，将不做任何处理                                                        |
-| ++ params     |        dict / null        |   Y   | 请求/查询参数                                                                                                                     |
-| ++ headers    |        dict / null        |   Y   | 请求头，如果为空，则会应用统一配置中的请求头，如果统一配置中也为空，则根据 `body_type` 自动解析，如果同时设置，则会应用当前请求头                                                     |
-| ++ cookies    |        dict / null        |   Y   | 请求发送时携带的 cookies                                                                                                            |
-| ++ body_type  |        str / null         |   Y   | 请求数据类型，支持：form、x_form、binary、GraphQL、text、js、json、html、xml                                                                  |
-| ++ body       | str / bytes / dict / null |   Y   | 请求体                                                                                                                         |
-| ++ files      |        dict / null        |   Y   | 请求文件上传，类似于在 postman 中使用 form-data 上传文件；需要将 body 中的文件上传参数在此定义，并删除 body 中的文件上传参数，类型为 Dict\[str, str] / Dict\[str, List\[str]] | |
-| + setup       |        list / null        |   N   | 请求前置                                                                                                                        |
-| ++ testcase   |     str / dict / null     |   N   | [前置关联测试用例](#testcase)                                                                                                       |
-| ++ sql        |     str / dict / null     |   N   | [前置 sql](#sql)                                                                                                              |  |
-| ++ hook       |        str / null         |   N   | [前置钩子函数](vars_hooks.md#hook-钩子函数)                                                                                           |
-| ++ wait_time  |        int / null         |   N   | 请求前等待时间，单位：秒                                                                                                                |
-| + teardown    |        list / null        |   N   | 请求后置                                                                                                                        |
-| ++ sql        |     str / dict / null     |   N   | [后置 sql](#sql)                                                                                                              |
-| ++ hook       |        str / null         |   N   | [后置钩子函数](vars_hooks.md#hook-钩子函数)                                                                                           |
-| ++ extract    |        dict / null        |   N   | [变量提取](#extract)                                                                                                            |
-| ++ assert     |     str / dict / null     |   N   | [高级断言](#assert)                                                                                                             |
-| ++ wait_time  |        int / null         |   N   | 请求后等待时间，单位：秒                                                                                                                |
+| - name        |            str            |   Y   | 测试用例名称                                                                                                                      |
+| - case_id     |            str            |   Y   | 测试用例唯一 id，建议使用蛇形命名法                                                                                                         |
+| - description |            str            |   Y   | 测试用例描述                                                                                                                      |
+| - is_run      |    bool / dict / null     |   Y   | [是否执行](#is-run)                                                                                                             |
+| - retry       |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用统一配置中的 retry                                                                                   |
+| - request     |           dict            |   Y   | 请求参数                                                                                                                        |
+| -- method     |            str            |   Y   | 请求方式，必须大写：GET、POST、PUT、DELETE、PATCH                                                                                         |
+| -- url        |            str            |   Y   | 请求链接，不包含域名时，域名需在测试环境文件中配置，域名定义方式：`host=` 优先于 `HOST=`；如果是完整链接，将不做任何处理                                                        |
+| -- params     |        dict / null        |   Y   | 请求/查询参数                                                                                                                     |
+| -- headers    |        dict / null        |   Y   | 请求头，如果为空，则会应用统一配置中的请求头，如果统一配置中也为空，则根据 `body_type` 自动解析，如果同时设置，则会应用当前请求头                                                     |
+| -- cookies    |        dict / null        |   Y   | 请求发送时携带的 cookies                                                                                                            |
+| -- body_type  |        str / null         |   Y   | 请求数据类型，支持：form、x_form、binary、GraphQL、text、js、json、html、xml                                                                  |
+| -- body       | str / bytes / dict / null |   Y   | 请求体                                                                                                                         |
+| -- files      |        dict / null        |   Y   | 请求文件上传，类似于在 postman 中使用 form-data 上传文件；需要将 body 中的文件上传参数在此定义，并删除 body 中的文件上传参数，类型为 Dict\[str, str] / Dict\[str, List\[str]] | |
+| - setup       |        list / null        |   N   | 请求前置                                                                                                                        |
+| -- testcase   |     str / dict / null     |   N   | [前置关联测试用例](#testcase)                                                                                                       |
+| -- sql        |     str / dict / null     |   N   | [前置 sql](#sql)                                                                                                              |  |
+| -- hook       |        str / null         |   N   | [前置钩子函数](vars_hooks.md#hook-钩子函数)                                                                                           |
+| -- wait_time  |        int / null         |   N   | 请求前等待时间，单位：秒                                                                                                                |
+| - teardown    |        list / null        |   N   | 请求后置                                                                                                                        |
+| -- sql        |     str / dict / null     |   N   | [后置 sql](#sql)                                                                                                              |
+| -- hook       |        str / null         |   N   | [后置钩子函数](vars_hooks.md#hook-钩子函数)                                                                                           |
+| -- extract    |        dict / null        |   N   | [变量提取](#extract)                                                                                                            |
+| -- assert     |     str / dict / null     |   N   | [高级断言](#assert)                                                                                                             |
+| -- wait_time  |        int / null         |   N   | 请求后等待时间，单位：秒                                                                                                                |
 
 ## 参数附加说明
 
@@ -75,7 +77,7 @@ config 和 test_steps 中的 is_run 参数有多种实现方式
     is_run: True  # bool
     ```
 
-3. dict 类型值, skip + reason, 自定义跳过执行原因
+3. dict 类型值, skip - reason, 自定义跳过执行原因
 
     ```yaml
     is_run:
@@ -83,7 +85,7 @@ config 和 test_steps 中的 is_run 参数有多种实现方式
       reason: 跳过执行原因  # str
     ```
 
-4. dict 类型值, skip_if + reason, 条件为真时跳过执行
+4. dict 类型值, skip_if - reason, 条件为真时跳过执行
 
     ```yaml
     is_run:
@@ -157,7 +159,7 @@ setup 中的 testcase 参数支持三种功能
        case_id: 测试用例 case_id  # str
        request: # list
          - value: 要更新的值  # Any
-           jsonpath: 需要进行更新或新增值的 jsonpath 表达式，用于数据更新或新增定位，表达式正则：r'^\$\.[a-zA-Z]+(?:\.[a-zA-Z]+)*$'
+           jsonpath: 需要进行更新或新增值的 jsonpath 表达式，用于数据更新或新增定位，表达式正则：r'^\$\.[a-zA-Z]-(?:\.[a-zA-Z]-)*$'
    ```
 
 ### sql
@@ -315,7 +317,7 @@ teardown 中的 assert 参数支持多种实现方式
              description: The unique identifier for a product
              type: integer
    ```
-   
+
    jsonschema 表达式以 json 格式编写可能更加直观，但不要在 yaml 文件中以 json 格式定义！
 
    可以选择直接将整个测试用例数据以 json 文件格式编写！
@@ -342,7 +344,7 @@ teardown 中的 assert 参数支持多种实现方式
 
 5. 正则断言（非常规断言）:
 
-   - [response 数据集](/case_data/use_jsonpath.md)
+    - [response 数据集](/case_data/use_jsonpath.md)
 
    ```yaml
    - assert:

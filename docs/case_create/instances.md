@@ -4,6 +4,8 @@
 以下作为基础的请求数据实例，包含基础请求必填项，可以直接 copy 此模板作为测试数据基础
 :::
 
+## Yaml file
+
 ```yaml
 config:
   allure:
@@ -13,7 +15,7 @@ config:
   request:
     env: xxx.env
   module: any
-  
+
 test_steps:
   - name: xx
     case_id: xx_001
@@ -22,12 +24,15 @@ test_steps:
     request:
       method: GET
       url: /test
-      params: 
-      headers: 
-      body_type: 
-      body: 
+      params:
+      headers:
+      body_type:
+      body:
       files: 
 ```
+
+## Json file
+
 ```json
 {
   "config": {

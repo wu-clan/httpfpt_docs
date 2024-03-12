@@ -4,7 +4,7 @@
 如果 `HttpFpt` 能够帮助到你，你可以通过 [Sponsor](https://wu-clan.github.io/sponsor/) 链接随意发起打赏，不胜感激；
 :::
 
-# HttpFpt
+# HttpFPT
 
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/wu-clan/httpfpt/ci.yml?logo=github)](https://github.com/wu-clan/httpfpt/actions)
 [![GitHub](https://img.shields.io/github/license/wu-clan/httpfpt)](https://github.com/wu-clan/httpfpt/blob/master/LICENSE)
@@ -13,7 +13,7 @@
 
 基于 HTTP 请求的快速数据驱动 pytest 接口自动化测试框架
 
-我在掘金发表了关于 `HttpFpt` 的前身和由来，包括部分功能点的说明， 感兴趣
+我在掘金发表了关于 `HttpFPT` 的前身和由来，包括部分功能点的说明， 感兴趣
 
 的小伙伴可以一睹为快，[点击跳转](https://juejin.cn/post/7224314619867136037)
 
@@ -21,59 +21,76 @@
 
 - python3 + pytest + parametrize + requests / httpx + yaml + allure + redis + 飞书 / 钉钉...
 
-## 🌴 目录结构介绍
+## 🌳 目录结构介绍
 
-- common/: 公共类
-- core/: 配置
-- data/: 测试数据
-- db/: 数据库
-- enums/: 枚举类
-- schemas/: 数据架构
-- log/: 日志
-- report/: 测试报告
-- templates/: 数据模板
-- testcases/: 测试项目和用例
-- utils/: 工具包
-- cli.py: CLI 程序
-- conftest.py: pytest.fixture 配置
-- pytest.ini: pytest 参数配置
-- run.py: 主程序运行入口
+```text
+httpfpt
+   |
+   ├─ common ·················· 公共方法
+   ├─ core ···················· 配置
+   ├─ data ···················· 测试数据
+   ├─ db ······················ 数据库
+   ├─ enums ··················· 枚举类
+   ├─ schemas ················· 数据架构
+   ├─ log ····················· 日志
+   ├─ report ·················· 测试报告
+   ├─ templates ··············· 数据模板
+   ├─ testcases ··············· 测试项目和用例
+   ├─ utils ··················· 工具包
+   ├─ cli.py ·················· CLI 程序
+   ├─ conftest.py ············· pytest 配置
+   ├─ pytest.ini ·············· pytest 运行配置
+   └─ run.py ·················· 主程序运行入口
+```
 
 ## ⬇️ 下载
 
-克隆:
+::: tip
+如果你需要修改代码实现功能定制，我们建议你使用源码
 
-```shell
-git clone https://github.com/wu-clan/httpfpt.git
-```
+如果你无需功能定制，我们建议你使用 SDK
+:::
+
+- 源码:
+
+   ```shell
+   git clone https://github.com/wu-clan/httpfpt.git
+   ```
+- SDK
+
+   ```shell
+   pip install httpfpt
+   ```
 
 ## 🧑‍💻 USE / DEV
 
-1. 安装依赖:
+- 如果你正在使用源码，则必须安装相关依赖
 
-    ```shell
-    pip install -r requirements.txt
-    ```
+   ```shell
+   pip install -r requirements.txt
+   ```
+- 如果你正在使用 SDK，则必须通过 httpfpt 命令创建新项目，命令使用帮助：[CLI](/cli/README.md)
 
-2. 安装 redis 并启动服务
+   ```shell
+   # check out help
+   httpfpt -h
+   
+   # create new project
+   httpfpt --startproject
+   ```
 
-   [Redis Windows](https://github.com/redis-windows/redis-windows)
+- 安装 redis 并启动服务
 
-   [Linux / macOS](https://redis.io/download/)
+  [Redis Windows](https://github.com/redis-windows/redis-windows)
 
-   [Docker](https://hub.docker.com/_/redis)
+  [Linux / macOS](https://redis.io/download/)
 
-3. 安装 mysql 数据库（可选，如果你需要本地数据库）
+  [Docker](https://hub.docker.com/_/redis)
+- 安装 mysql 数据库（可选，如果你需要本地数据库）
 
-   [Windows / Linux / macOS](https://dev.mysql.com/downloads/installer/)
+  [Windows / Linux / macOS](https://dev.mysql.com/downloads/installer/)
 
-   [Docker](https://hub.docker.com/_/mysql)
-
-::: warning
-allure 测试报告默认使用 allure-pytest
-生成，但是不能直接访问，你必须安装 [allure](https://www.yuque.com/poloyy/python/aiqlmi)
-本地程序和 [Java JDK](https://adoptopenjdk.net/archive.html?variant=openjdk8&jvmVariant=hotspot) 才能进行可视化浏览
-:::
+  [Docker](https://hub.docker.com/_/mysql)
 
 ## 📺 入门指北
 

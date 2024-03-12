@@ -21,6 +21,10 @@ export const sidebar = [
                 link: "/case_create/instances.html",
             },
             {
+                text: "📄 完整实例",
+                link: "/case_create/complete_ins.html",
+            },
+            {
                 text: "🪪 认证",
                 link: "/case_create/auth.html",
             }
@@ -68,9 +72,5 @@ export const sidebar = [
     {
         text: "更新日志",
         link: "/changes_log/",
-    },
-    {
-        text: "❤️❤️❤️",
-        link: "https://wu-clan.github.io/sponsor/"
     }
 ];

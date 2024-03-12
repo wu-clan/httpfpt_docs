@@ -6,7 +6,7 @@
 
 测试项目配置
 
-- `project`：指定测试项目，详情请查看：[多项目？](/projects/README.md)
+- `name`：指定测试项目，详情请查看：[多项目？](/projects/README.md)
 
 ## 🔧 report
 
@@ -39,32 +39,41 @@ Redis 数据库配置
 
 邮件发送配置
 
-- `host_server`： 邮件服务器
+- `host`： 邮件服务器
 - `port`： 端口号
 - `user`： 用户名
 - `password`： 密码（服务密码，非邮箱密码）
-- `send_to`： 收件人
-- `is_ssl`： 是否 SSL 验证
-- `is_send_report`： 是否发送邮件测试报告，默认关闭
+- `receiver`： 收件人
+- `ssl`： 是否 SSL 验证
+- `send`： 是否发送邮件测试报告，默认关闭
 
-## 🔧 ding_talk
+## 🔧 dingding
 
 钉钉推送配置
 
 - `webhook`： 钉钉机器人 webhook 地址
-- `proxies.http`： 请求 http 代理 
+- `proxies.http`： 请求 http 代理
 - `proxies.https`： 请求 https 代理
-- `is_send_report`： 是否发送钉钉测试报告，默认关闭
+- `send`： 是否发送钉钉测试报告，默认关闭
 
-## 🔧 lark_talk
+## 🔧 feishu
 
 飞书推送配置
 
 - `webhook`： 飞书机器人 webhook 地址
-- `proxies.http`： 请求 http 代理 
+- `proxies.http`： 请求 http 代理
 - `proxies.https`： 请求 https 代理
-- `is_send_report`： 是否发送飞书测试报告，默认关闭
-  
+- `send`： 是否发送飞书测试报告，默认关闭
+
+## 🔧 WeChat
+
+企业微信推送配置
+
+- `webhook`： 企微机器人 webhook 地址
+- `proxies.http`： 请求 http 代理
+- `proxies.https`： 请求 https 代理
+- `send`： 是否发送企微测试报告，默认关闭
+
 ## 🔧 request
 
 请求发送默认基础配置
@@ -72,6 +81,6 @@ Redis 数据库配置
 - `timeout`： 请求超时时间，默认 10 s
 - `verify`： 请求验证，默认关闭
 - `redirects`： 跟随重定向，默认开启
-- `proxies.http`： 请求 http 代理 
+- `proxies.http`： 请求 http 代理
 - `proxies.https`： 请求 https 代理
 - `retry`： 请求响应异常重试，默认 3 次

@@ -3,7 +3,7 @@
 官方文档：
 
 - [XPath for JSON](https://goessner.net/articles/JsonPath/)
-- [JsonPath WG](https://datatracker.ietf.org/doc/html/draft-ietf-jsonpath-base-13)
+- [rfc 9535](https://datatracker.ietf.org/doc/html/rfc9535)
 
 框架内部依赖：
 
@@ -33,7 +33,8 @@ JsonPath 语法：
   "text": "响应文本",
   "stat": {
     "execute_time": "请求执行开始时间"
-  }
+  },
+  "request": "接口请求参数"
 }
 ```
 

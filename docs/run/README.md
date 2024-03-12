@@ -1,10 +1,10 @@
 ## 🚀 运行方式
 
-### Pycharm (推荐)
+### PyCharm (推荐)
 
 在 run.py 文件内部，鼠标右键选择执行即可
 
-### 命令行
+### 终端
 
 在 run.py
 文件目录下打开终端，如果遇到路径/模块问题，请参阅：[通用解决方法](https://www.cnblogs.com/duanweishi/p/15987693.html)
@@ -13,9 +13,24 @@
 python3 run.py
 ```
 
+### CLI
+
+此功能仅适用于源码 cli，在 httpfpt 目录下打开终端
+
+```shell
+# 进入 cli.py 目录
+cd httpfpt
+
+# 运行测试
+python cli.py -r
+```
+
 ## 📖 默认运行参数
 
-- `log_level`: 控制台打印输出级别，默认"-v"
+- `testcase_generate`: 自动生成测试用例（跳过同名文件），建议通过 CLI 手动执行，默认关闭
+- `clean_cache`: 清理 redis 缓存数据，对于脏数据，这很有用，默认关闭
+- `pydantic_verify`: 用例数据完整架构 pydantic 快速检测, 默认开启
+- `log_level`: 控制台打印输出级别，默认"-s"
 - `case_path`: 指定测试用例函数，默认为空，如果指定，则执行指定用例，否则执行全部
 - `html_report`: 生成 HTML 测试报告，默认开启
 - `allure`: 生成 allure 测试报告，默认开启
@@ -31,13 +46,3 @@ python3 run.py
 ## 📖 扩展运行参数
 
 如果你想手动添加更多 pytest 插件，并且指定它们的运行参数，只需在 main 方法下的 run() 方法中以字符串或键值对形式填入即可
-
-## 🔘 运行方式选择
-
-**_运行参数几乎不包含输入智能提示，请注意使用_**
-
-如果自定义参数和默认参数同时存在，那么自定义参数将覆盖默认参数
-
-- Pycharm: 无需担心运行环境问题
-
-- 命令行: 可能发生环境问题
