@@ -15,7 +15,7 @@ python3 run.py
 
 ### CLI
 
-此功能仅适用于源码 cli，在 httpfpt 目录下打开终端
+此功能仅适用于源码 CLI（SDK 不包含此功能）在 httpfpt 目录下打开终端
 
 ```shell
 # 进入 cli.py 目录

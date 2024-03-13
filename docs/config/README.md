@@ -65,7 +65,7 @@ Redis 数据库配置
 - `proxies.https`： 请求 https 代理
 - `send`： 是否发送飞书测试报告，默认关闭
 
-## 🔧 WeChat
+## 🔧 wechat
 
 企业微信推送配置
 

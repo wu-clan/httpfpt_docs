@@ -15,7 +15,7 @@ CLI 程序架构已经初步完成，但是一些功能方面还待完善，尤�
    cd httpfpt
    ```
 
-2. 查看 cli 程序使用帮助
+2. 查看 CLI 程序使用帮助
 
    ```shell
    python cli.py -h
