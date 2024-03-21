@@ -30,11 +30,13 @@
 | -- retry      |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                         |
 | - module      |            str            |   Y   | 用例所属模块                                                                                                                      |
 | - is_run      |    bool / dict / null     |   N   | [是否执行](#is-run)                                                                                                             |
+| - mark        |        list / null        |   N   | pytest mark 标记                                                                                                              |
 | test_steps    |        list / dict        |   Y   | 测试步骤，多条测试用例时，务必使用 List\[dict] 格式                                                                                            |
 | - name        |            str            |   Y   | 测试用例名称                                                                                                                      |
 | - case_id     |            str            |   Y   | 测试用例唯一 id，建议使用蛇形命名法                                                                                                         |
 | - description |            str            |   Y   | 测试用例描述                                                                                                                      |
 | - is_run      |    bool / dict / null     |   Y   | [是否执行](#is-run)                                                                                                             |
+| - mark        |    bool / dict / null     |   Y   | pytest mark 标记，用于 pytest -m 参数，如果为空，则会应用统一配置中的请求头                                                                           |
 | - retry       |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用统一配置中的 retry                                                                                   |
 | - request     |           dict            |   Y   | 请求参数                                                                                                                        |
 | -- method     |            str            |   Y   | 请求方式，必须大写：GET、POST、PUT、DELETE、PATCH                                                                                         |

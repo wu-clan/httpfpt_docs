@@ -33,6 +33,7 @@ python cli.py -r
 
 ## 📖 默认运行参数
 
+- `*args`: pytest 运行参数，例如：`('-m', 'test_mark')`
 - `testcase_generate`: 自动生成测试用例（跳过同名文件），建议通过 CLI 手动执行，默认关闭
 - `clean_cache`: 清理 redis 缓存数据，对于脏数据，这很有用，默认关闭
 - `pydantic_verify`: 用例数据完整架构 pydantic 快速检测, 默认开启
@@ -48,6 +49,7 @@ python cli.py -r
 - `strict_markers`: markers 严格模式，对于使用了自定义 marker 的用例，如果 marker 未在 pytest.ini 注册，用例运行将报错
 - `capture`: 避免在使用输出模式为"v"和"s"时，html报告中的表格日志为空的情况，默认开启
 - `disable_warnings`: 关闭控制台警告信息，默认开启
+- `**kwargs`: pytest 运行关键字参数，通常取决于插件
 
 ## 📖 扩展运行参数
 
