@@ -1,7 +1,7 @@
 ::: tip 🙏🙏🙏
 欢迎加入我们的[交流群](https://github.com/wu-clan)
 
-如果 `HttpFpt` 能够帮助到你，你可以通过 [Sponsor](https://wu-clan.github.io/sponsor/) 链接随意发起打赏，不胜感激；
+如果 `HttpFPT` 能够帮助到你，你可以通过 [Sponsor](https://wu-clan.github.io/sponsor/) 链接随意发起打赏，不胜感激；
 :::
 
 # HttpFPT
@@ -86,6 +86,7 @@ httpfpt
   [Linux / macOS](https://redis.io/download/)
 
   [Docker](https://hub.docker.com/_/redis)
+
 - 安装 mysql 数据库（可选，如果你需要本地数据库）
 
   [Windows / Linux / macOS](https://dev.mysql.com/downloads/installer/)
@@ -97,4 +98,3 @@ httpfpt
 当前视频可能与当前版本有所出入，仅供参考
 
 <BiliBili bvid="BV1jh4y1a7ic"/>
-<BiliBili bvid="BV1by421q7Yf"/>
