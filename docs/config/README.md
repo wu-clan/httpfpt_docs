@@ -78,9 +78,15 @@ Redis 数据库配置
 
 请求发送默认基础配置
 
+- `global_env`：全局统一测试环境，默认为空字符串
 - `timeout`： 请求超时时间，默认 10 s
 - `verify`： 请求验证，默认关闭
 - `redirects`： 跟随重定向，默认开启
 - `proxies.http`： 请求 http 代理
 - `proxies.https`： 请求 https 代理
 - `retry`： 请求响应异常重试，默认 3 次
+
+::: warning
+`global_env`: 位于 core/run_env/ 目录下的文件名，必须以 `.env` 结尾，如果使用此配置，
+将覆盖所有测试用例数据中的 `env` 配置，这有助于统一全局测试环境；
+:::
