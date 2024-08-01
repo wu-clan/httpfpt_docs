@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-2fb1bbbc","path":"/case_data/complete_ins.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1722508046000,"contributors":[{"name":"Wu Clan","email":"jianhengwu0407@gmail.com","commits":1}]},"filePathRelative":"case_data/complete_ins.md"}');export{a as data};
