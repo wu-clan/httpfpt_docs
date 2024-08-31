@@ -27,11 +27,11 @@
 ## 变量替换逻辑
 
 ::: tip
-变量只有在测试数据 request、setup、teardown 参数下可用，且变量定义顺序很重要
+变量只有在测试数据 request、setup(sql)、teardown(sql、assert) 参数下可用，且变量定义顺序很重要
 :::
 
 ::: warning
-严格禁止变量值设置为空（None、none、null...）
+严格禁止变量值设置为空值（None、none、null...）
 :::
 
 - 常规变量
