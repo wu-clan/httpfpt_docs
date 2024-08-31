@@ -19,7 +19,7 @@
 | -- story      |            str            |   Y   | allure story                                                                                                                |
 | -- severity   |        str / null         |   N   | allure severity：severity、critical、normal、minor、trivial                                                                      |
 | - request     |           dict            |   Y   | 请求参数                                                                                                                        |
-| -- env        |            str            | Y / N | 测试环境，位于 core/run_env/ 目录下的文件名，必须以 `.env` 结尾                                                                                 |
+| -- env        |            str            |   N   | 测试环境，位于 core/run_env/ 目录下的文件名，必须以 `.env` 结尾                                                                                 |
 | -- headers    |        dict / null        |   N   | 请求头                                                                                                                         |
 | -- timeout    |        int / null         |   N   | 请求超时，用于测试用例接口请求超时时长，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                    |
 | -- verify     |        bool / null        |   N   | 请求验证，用于测试用例接口请求验证，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |

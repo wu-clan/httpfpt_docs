@@ -59,6 +59,10 @@ export const sidebar = [
         link: "/reports/",
     },
     {
+        text: "Jenkins",
+        link: "/jenkins/",
+    },
+    {
         text: "常见问题",
         link: "/questions/",
     },
