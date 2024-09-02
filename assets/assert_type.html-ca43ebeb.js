@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-07b785d5","path":"/case_data/assert_type.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1725272201000,"contributors":[{"name":"Wu Clan","email":"jianhengwu0407@gmail.com","commits":1}]},"filePathRelative":"case_data/assert_type.md"}');export{a as data};
