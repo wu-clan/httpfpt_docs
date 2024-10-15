@@ -51,7 +51,7 @@ bearer_token_custom:
 
 ---
 
-### headers cookies
+### Cookies
 
 Cookie 认证，自动添加到请求头中
 
