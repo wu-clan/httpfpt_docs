@@ -8,46 +8,47 @@ config:
     epic:
     feature:
     story:
-    # severity:
+  #   severity:
   request:
     env:
-    # headers:
-    # timeout:
-    # verify:
-    # redirects:
-    # proxies:
-    #   http:
-    #   https:
-    # retry:
+  #   headers:
+  #   timeout:
+  #   verify:
+  #   redirects:
+  #   proxies:
+  #    http:
+  #    https:
+  #   retry:
   module:
-  # is_run:
-  # mark:
+# mark:
+# is_run:
 
 test_steps:
   name:
   case_id:
   description:
-  is_run:
-  # mark:
-  # retry:
+  #  is_run:
+  #  mark:
+  #  retry:
   request:
     method:
     url:
-    # params:
-    # headers:
-    # cookies:
-    # body_type:
-    # body:
-    # files:
-#  setup:
-#    - testcase:
-#    - sql:
-#    - hook:
-#    - wait_time:
-#  teardown:
-#    - sql:
-#    - hook:
-#    - extract:
-#    - assert:
-#    - wait_time:
+#   params:
+#   headers:
+#   cookies:
+#   body_type:
+#   body:
+#   files:
+# setup:
+#   - testcase:
+#   - sql:
+#   - hook:
+#   - wait_time:
+# teardown:
+#   - sql:
+#   - hook:
+#   - extract:
+#   - assert:
+#   - wait_time:
+
 ```
