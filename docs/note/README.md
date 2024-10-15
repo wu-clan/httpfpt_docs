@@ -1,9 +1,3 @@
-::: tip 🙏🙏🙏
-欢迎加入我们的[交流群](https://github.com/wu-clan)
-
-如果 `HttpFPT` 能够帮助到你，你可以通过 [Sponsor](https://wu-clan.github.io/sponsor/) 链接随意发起打赏，不胜感激；
-:::
-
 # HttpFPT
 
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/wu-clan/httpfpt/ci.yml?logo=github)](https://github.com/wu-clan/httpfpt/actions)
