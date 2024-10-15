@@ -20,7 +20,8 @@ export default defineUserConfig({
         sidebar: sidebar,
         sidebarDepth: 2,
         editLink: false,
-        lastUpdatedText: "Releases",
+        lastUpdated: false,
+        contributors: false,
     }),
     plugins: [
         [
