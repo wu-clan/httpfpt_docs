@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-040ddaec","path":"/case_data/instances.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"Yaml file","slug":"yaml-file","link":"#yaml-file","children":[]},{"level":2,"title":"Json file","slug":"json-file","link":"#json-file","children":[]}],"git":{},"filePathRelative":"case_data/instances.md"}');export{e as data};

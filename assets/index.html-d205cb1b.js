@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-d266c842","path":"/warnings/","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"⚠️ conftest.py / pytest.ini","slug":"⚠️-conftest-py-pytest-ini","link":"#⚠️-conftest-py-pytest-ini","children":[]}],"git":{},"filePathRelative":"warnings/README.md"}');export{t as data};
