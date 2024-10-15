@@ -8,37 +8,37 @@ config:
     epic:
     feature:
     story:
-#    severity:
+    # severity:
   request:
     env:
-#    headers:
-#    timeout:
-#    verify:
-#    redirects:
-#    proxies:
-#      http:
-#      https:
-#    retry:
+    # headers:
+    # timeout:
+    # verify:
+    # redirects:
+    # proxies:
+    #   http:
+    #   https:
+    # retry:
   module:
-#  is_run:
-#  mark:
+  # is_run:
+  # mark:
 
 test_steps:
   name:
   case_id:
   description:
   is_run:
-#  mark:
-#  retry:
+  # mark:
+  # retry:
   request:
     method:
     url:
-    params:
-    headers:
-    cookies:
-    body_type:
-    body:
-    files:
+    # params:
+    # headers:
+    # cookies:
+    # body_type:
+    # body:
+    # files:
 #  setup:
 #    - testcase:
 #    - sql:
