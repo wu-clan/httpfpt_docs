@@ -21,13 +21,13 @@
 | - request     |           dict            |   Y   | 请求参数                                                                                                                        |
 | -- env        |            str            |   N   | 测试环境，位于 core/run_env/ 目录下的文件名，必须以 `.env` 结尾                                                                                 |
 | -- headers    |        dict / null        |   N   | 请求头                                                                                                                         |
-| -- timeout    |        int / null         |   N   | 请求超时，用于测试用例接口请求超时时长，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                    |
-| -- verify     |        bool / null        |   N   | 请求验证，用于测试用例接口请求验证，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
-| -- redirects  |        bool / null        |   N   | 重定向，用于测试用例接口请求重定向，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
-| -- proxies    |        dict / null        |   N   | 请求代理，用于测试用例接口请求代理，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                      |
+| -- timeout    |        int / null         |   N   | 请求超时，用于测试用例接口请求超时时长，如果未设置或为空，则默认使用 [core/conf.toml](config.md#🔧-request) 文件中的配置                                            |
+| -- verify     |        bool / null        |   N   | 请求验证，用于测试用例接口请求验证，如果未设置或为空，则默认使用 [core/conf.toml](config.md#🔧-request) 文件中的配置                                              |
+| -- redirects  |        bool / null        |   N   | 重定向，用于测试用例接口请求重定向，如果未设置或为空，则默认使用 [core/conf.toml](config.md#🔧-request) 文件中的配置                                              |
+| -- proxies    |        dict / null        |   N   | 请求代理，用于测试用例接口请求代理，如果未设置或为空，则默认使用 [core/conf.toml](config.md#🔧-request) 文件中的配置                                              |
 | --- http      |        str / null         | Y / Y | http 代理                                                                                                                     |
 | --- https     |        str / null         | Y / Y | https 代理                                                                                                                    |
-| -- retry      |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用 [core/conf.toml](/config/README.md#🔧-request) 文件中的配置                                         |
+| -- retry      |        int / null         |   N   | 接口请求响应异常时的重试次数，如果未设置或为空，则默认使用 [core/conf.toml](config.md#🔧-request) 文件中的配置                                                 |
 | - module      |            str            |   Y   | 用例所属模块                                                                                                                      |
 | - is_run      |    bool / dict / null     |   N   | [是否执行](#is-run)                                                                                                             |
 | - mark        |        list / null        |   N   | pytest mark 标记                                                                                                              |
@@ -221,7 +221,7 @@ teardown 中的 assert 参数支持多种实现方式
 
 1. 常规断言：
 
-   与 python assert 的语法格式基本一致，但比较值受约束, 比较值从 [response 数据集](/case_data/use_jsonpath.md) 进行取值，
+   与 python assert 的语法格式基本一致，但比较值受约束, 比较值从 [response 数据集](use_jsonpath.md#response-数据集) 进行取值，
    并且以 `pm.response.get('')` 语法开始取值，后面可以继续使用 .get() 方法或其他 python 可执行代码，
    为了避免引号问题，断言脚本内必须使用`英文单引号`处理
 
@@ -250,9 +250,9 @@ teardown 中的 assert 参数支持多种实现方式
 
 2. jsonpath 断言（非常规断言）:
 
-    - [断言类型](/case_data/assert_type.md)
-    - [JsonPath 取值](/case_data/use_jsonpath.md#JsonPath-取值)
-    - [response 数据集](/case_data/use_jsonpath.md)
+    - [断言类型](assert_type.md)
+    - [JsonPath 取值](use_jsonpath.md#jsonpath-取值)
+    - [response 数据集](use_jsonpath.md#response-数据集)
 
    ```yaml
    - assert:
@@ -347,7 +347,7 @@ teardown 中的 assert 参数支持多种实现方式
 
 5. 正则断言（非常规断言）:
 
-    - [response 数据集](/case_data/use_jsonpath.md)
+    - [response 数据集](use_jsonpath.md#response-数据集)
 
    ```yaml
    - assert:

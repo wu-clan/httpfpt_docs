@@ -1,6 +1,7 @@
 .idea/
 .fleet/
 /node_modules/
-docs/.vuepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
 .temp/
 .cache/

@@ -1,4 +1,4 @@
-# CLI 程序使用说明
+# CLI
 
 CLI 程序是命令行工具，它同样是此框架的组成成分，使用 [cappa](https://cappa.readthedocs.io/en/latest/) 构建
 
@@ -21,7 +21,7 @@ CLI 程序架构已经初步完成，但是一些功能方面还待完善，尤�
    python cli.py -h
    ```
 
-   <img :src="$withBase('/assets/img/source_cli.jpg')" alt="CLI">
+   ![](/assets/img/source_cli.jpg)
 
 3. 根据帮助说明, 进行其他操作
 
@@ -33,4 +33,4 @@ CLI 程序架构已经初步完成，但是一些功能方面还待完善，尤�
 httpfpt -h
 ```
 
-<img :src="$withBase('/assets/img/pip_cli.jpg')" alt="CLI">
+![](/assets/img/pip_cli.jpg)

@@ -1,10 +1,5 @@
 # HttpFPT
 
-[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/wu-clan/httpfpt/ci.yml?logo=github)](https://github.com/wu-clan/httpfpt/actions)
-[![GitHub](https://img.shields.io/github/license/wu-clan/httpfpt)](https://github.com/wu-clan/httpfpt/blob/master/LICENSE)
-[![Static Badge](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/downloads/)
-[![GitHub release (with filter)](https://img.shields.io/github/v/release/wu-clan/httpfpt)](https://github.com/wu-clan/httpfpt/releases)
-
 基于 HTTP 请求的快速数据驱动 pytest 接口自动化测试框架
 
 我在掘金发表了关于 `HttpFPT` 的前身和由来，包括部分功能点的说明， 感兴趣
@@ -63,7 +58,7 @@ httpfpt
    ```shell
    pip install -r requirements.txt
    ```
-- 如果你正在使用 SDK，则必须通过 httpfpt 命令创建新项目，命令使用帮助：[CLI](/cli/README.md)
+- 如果你正在使用 SDK，则必须通过 httpfpt 命令创建新项目，命令使用帮助：[CLI](cli.md)
 
    ```shell
    # check out help
@@ -91,4 +86,10 @@ httpfpt
 
 当前视频可能与当前版本有所出入，仅供参考
 
-<BiliBili bvid="BV1jh4y1a7ic"/>
+<iframe
+style="width:100%; aspect-ratio:16/9; margin-top: 2em;"
+src="//player.bilibili.com/player.html?bvid=BV1jh4y1a7ic"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>

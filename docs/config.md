@@ -6,7 +6,7 @@
 
 测试项目配置
 
-- `name`：指定测试项目，详情请查看：[多项目？](/projects/README.md)
+- `name`：指定测试项目，详情请查看：[多项目？](/projects)
 
 ## 🔧 report
 

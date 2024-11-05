@@ -15,8 +15,7 @@ allure 测试报告默认使用 allure-pytest 生成，但是不能直接访问�
 - html：测试报告无需额外配置，默认开启，需手动在文件夹下浏览
 - 钉钉 / 飞书 / 邮箱 / 企微：测试报告需正确配置并打开发送开关，测试运行完成后将自动推送
 
-🔍 Yaml Report
--
+### 🔍 Yaml Report
 
 ```yaml
 elapsed: 9.003
@@ -29,26 +28,26 @@ started_time: '2023-04-01 16:05:37'
 total: 9
 ```
 
-🔍 Allure Report
--
-<img :src="$withBase('/assets/img/allure_report.jpg')" alt="allure_report">
+### 🔍 Allure Report
 
-🔍 Html Report
--
-<img :src="$withBase('/assets/img/html_report.jpg')" alt="html_report">
+![](/assets/img/allure_report.jpg)
 
-🔍 DingDing Report
--
-<img :src="$withBase('/assets/img/ding_report.jpg')" alt="ding_report">
+### 🔍 Html Report
 
-🔍 WeChat Report
--
-<img :src="$withBase('/assets/img/ding_report.jpg')" alt="ding_report">
+![](/assets/img/html_report.jpg)
 
-🔍 FeiShu Report
--
-<img :src="$withBase('/assets/img/lark_report.jpg')" alt="lark_report">
+### 🔍 DingDing Report
 
-🔍 Email Report
--
-<img :src="$withBase('/assets/img/email_report.jpg')" alt="email_report">
+![](/assets/img/ding_report.jpg)
+
+### 🔍 WeChat Report
+
+![](/assets/img/ding_report.jpg)
+
+### 🔍 FeiShu Report
+
+![](/assets/img/lark_report.jpg)
+
+### 🔍 Email Report
+
+![](/assets/img/email_report.jpg)

@@ -1,22 +1,19 @@
 {
   "name": "httpfpt_docs",
-  "version": "0.2.2",
+  "version": "0.7.0",
   "description": "Docs for HttpFpt",
   "main": "index.js",
   "repository": "https://github.com/wu-clan/httpfpt",
   "author": "Wu Clan",
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.67",
-    "@vuepress/plugin-medium-zoom": "2.0.0-beta.67",
-    "@vuepress/plugin-search": "2.0.0-beta.67",
-    "vue": "^3.3.4",
-    "vuepress": "2.0.0-beta.67",
-    "vuepress-plugin-clipboard": "2.1.5",
-    "vuepress-plugin-components": "2.0.0-beta.237"
+    "medium-zoom": "^1.1.0",
+    "vitepress": "^1.5.0",
+    "vue": "^3.5.12"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
   }
 }

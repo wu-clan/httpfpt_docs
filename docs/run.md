@@ -1,7 +1,7 @@
 ::: warning
 在项目运行前，确保你已编写用例数据，并已生成测试用例
 
-详见：[测试用例创建](/case_create/README.md)
+详见：[测试用例创建](case_create.md)
 :::
 
 ## 🚀 运行方式
