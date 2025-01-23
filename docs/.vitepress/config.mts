@@ -14,7 +14,7 @@ export default defineConfig({
     sidebar: sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wu-clan/httpfpt' },
-      { icon: 'discord', link: 'https://discord.gg/yNN3wTbVAC' }
+      { icon: 'discord', link: 'https://discord.gg/RK4Eh7zVg8' }
     ],
     footer: {
       message: 'MIT License',
