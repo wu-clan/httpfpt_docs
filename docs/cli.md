@@ -1,5 +1,3 @@
-# CLI
-
 CLI 程序是命令行工具，它同样是此框架的组成成分，使用 [cappa](https://cappa.readthedocs.io/en/latest/) 构建
 
 ::: details Need Help

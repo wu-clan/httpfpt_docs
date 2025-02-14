@@ -15,7 +15,7 @@ allure 测试报告默认使用 allure-pytest 生成，但是不能直接访问�
 - html：测试报告无需额外配置，默认开启，需手动在文件夹下浏览
 - 钉钉 / 飞书 / 邮箱 / 企微：测试报告需正确配置并打开发送开关，测试运行完成后将自动推送
 
-### 🔍 Yaml Report
+## 🔍 Yaml Report
 
 ```yaml
 elapsed: 9.003
@@ -28,26 +28,26 @@ started_time: '2023-04-01 16:05:37'
 total: 9
 ```
 
-### 🔍 Allure Report
+## 🔍 Allure Report
 
 ![](/assets/img/allure_report.jpg)
 
-### 🔍 Html Report
+## 🔍 Html Report
 
 ![](/assets/img/html_report.jpg)
 
-### 🔍 DingDing Report
+## 🔍 DingDing Report
 
 ![](/assets/img/ding_report.jpg)
 
-### 🔍 WeChat Report
+## 🔍 WeChat Report
 
 ![](/assets/img/ding_report.jpg)
 
-### 🔍 FeiShu Report
+## 🔍 FeiShu Report
 
 ![](/assets/img/lark_report.jpg)
 
-### 🔍 Email Report
+## 🔍 Email Report
 
 ![](/assets/img/email_report.jpg)

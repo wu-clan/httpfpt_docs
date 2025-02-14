@@ -21,7 +21,7 @@ export const sidebar = [
             {text: '数据说明', link: '/case_data'},
             {text: "数据实例", link: "/instances",},
             {text: "完整实例", link: "/complete_ins",},
-            {text: "授权认证", link: "/auth",},
+            {text: "授权/认证", link: "/auth",},
             {text: "变量和钩子", link: "/vars_hooks",},
             {text: "JsonPath", link: "/use_jsonpath",},
             {text: "断言类型", link: "/assert_type",}

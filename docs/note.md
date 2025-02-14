@@ -82,14 +82,7 @@ httpfpt
 
   [Docker](https://hub.docker.com/_/mysql)
 
-## 📺 入门指北
+[//]: # (## 📺 入门指北)
 
-当前视频可能与当前版本有所出入，仅供参考
-
-<iframe
-style="width:100%; aspect-ratio:16/9; margin-top: 2em;"
-src="//player.bilibili.com/player.html?bvid=BV1jh4y1a7ic"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
+[//]: # ()
+[//]: # (当前视频可能与当前版本有所出入，仅供参考)

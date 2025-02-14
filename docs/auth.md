@@ -5,9 +5,7 @@
 - `is_auth`: 是否开启自动授权
 - `auth_type`: 授权方式，支持以下之一 `['bearer_token', 'bearer_token_custom', 'header_cookie']`
 
----
-
-### Bearer Token
+## Bearer Token
 
 JWT 认证，自动添加至每个请求的请求头中
 
@@ -36,7 +34,7 @@ bearer_token:
 
 ---
 
-### Bearer Token Custom
+## Bearer Token Custom
 
 JWT 认证，自动添加至每个请求的请求头中
 
@@ -51,7 +49,7 @@ bearer_token_custom:
 
 ---
 
-### Cookies
+## Cookies
 
 Cookie 认证，自动添加到请求头中
 
