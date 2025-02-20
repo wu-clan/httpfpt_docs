@@ -1,10 +1,4 @@
-::: warning
-allure 测试报告默认使用 allure-pytest 生成，但是不能直接访问，有以下选择
-
-1. 本地访问：你必须安装 [allure](https://www.yuque.com/poloyy/python/aiqlmi)
-   程序和 [Java JDK](https://adoptopenjdk.net/archive.html?variant=openjdk8&jvmVariant=hotspot) 才能进行本地可视化浏览
-2. Jenkins：将 allure 测试报告集成到到 Jenkins 中
-:::
+# 预览
 
 ## 📝 测试报告说明
 
@@ -29,6 +23,14 @@ total: 9
 ```
 
 ## 🔍 Allure Report
+
+::: warning
+allure 测试报告默认使用 allure-pytest 生成，但是不能直接访问，有以下选择
+
+1. 本地访问：你必须安装 [allure](https://www.yuque.com/poloyy/python/aiqlmi)
+   程序和 [Java JDK](https://adoptopenjdk.net/archive.html?variant=openjdk8&jvmVariant=hotspot) 才能进行本地可视化浏览
+2. Jenkins：将 allure 测试报告集成到到 Jenkins 中
+   :::
 
 ![](/assets/img/allure_report.jpg)
 

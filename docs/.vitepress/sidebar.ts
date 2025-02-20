@@ -40,7 +40,7 @@ export const sidebar = [
         text: '测试报告',
         collapsed: false,
         items: [
-            {text: "展示", link: "/report",},
+            {text: "预览", link: "/report",},
             {text: "Jenkins", link: "/jenkins",},
         ]
     },

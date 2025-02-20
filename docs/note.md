@@ -40,33 +40,35 @@ httpfpt
 如果你无需功能定制，我们建议你使用 SDK
 :::
 
-- 源码:
+### 源码:
 
-   ```shell
-   git clone https://github.com/wu-clan/httpfpt.git
-   ```
-- SDK
+```shell
+git clone https://github.com/wu-clan/httpfpt.git
+```
 
-   ```shell
-   pip install httpfpt
-   ```
+### SDK
+
+```shell
+pip install httpfpt
+```
 
 ## 🧑‍💻 USE / DEV
 
-- 如果你正在使用源码，则必须安装相关依赖
+### 源码
 
-   ```shell
-   pip install -r requirements.txt
-   ```
-- 如果你正在使用 SDK，则必须通过 httpfpt 命令创建新项目，命令使用帮助：[CLI](cli.md)
+```shell
+pip install -r requirements.txt
+```
 
-   ```shell
-   # check out help
-   httpfpt -h
-   
-   # create new project
-   httpfpt --startproject
-   ```
+### SDK
+
+```shell
+# check out help
+httpfpt -h
+
+# create new project
+httpfpt --startproject
+```
 
 - 安装 redis 并启动服务
 
@@ -85,4 +87,5 @@ httpfpt
 [//]: # (## 📺 入门指北)
 
 [//]: # ()
+
 [//]: # (当前视频可能与当前版本有所出入，仅供参考)
