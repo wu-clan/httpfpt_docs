@@ -9,7 +9,7 @@ export default defineConfig({
   description: "Documentation for HttpFPT",
   lastUpdated: false,
   themeConfig: {
-    logo: '/assets/img/head.png',
+    logo: '/assets/img/logo.png',
     nav: navbar,
     sidebar: sidebar,
     outline: {

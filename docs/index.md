@@ -5,7 +5,7 @@ hero:
   name: HttpFPT
   text: 数据驱动型 API 自动化测试框架
   tagline: python3 + pytest + parametrize + requests / httpx + yaml + allure + redis + mysql + pydantic + log + 飞书 / 钉钉 /企微/ 邮箱通知...
-  image: /assets/img/head.png
+  image: /assets/img/logo.png
   actions:
     - theme: brand
       text: 快速开始 >
