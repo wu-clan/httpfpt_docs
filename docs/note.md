@@ -1,16 +1,18 @@
-# HttpFPT
-
-基于 HTTP 请求的快速数据驱动 pytest 接口自动化测试框架
+HTTPFPT 是基于 HTTP 请求的快速数据驱动 pytest 接口自动化测试框架
 
 我在掘金发表了关于 `HttpFPT` 的前身和由来，包括部分功能点的说明， 感兴趣
 
 的小伙伴可以一睹为快，[点击跳转](https://juejin.cn/post/7224314619867136037)
 
-## 🧠 设计思路
+## 设计思路
 
-- python3 + pytest + parametrize + requests / httpx + yaml + allure + redis + 飞书 / 钉钉...
+![](/assets/img/design.png)
 
-## 🌳 目录结构介绍
+## 工作流
+
+![](https://github.com/wu-clan/picx-images-hosting/raw/master/httpfpt_flowchart.png)
+
+## 目录结构介绍
 
 ```text
 httpfpt
@@ -32,7 +34,7 @@ httpfpt
    └─ run.py ·················· 主程序运行入口
 ```
 
-## ⬇️ 下载
+## 下载
 
 ::: tip
 如果你需要修改代码实现功能定制，我们建议你使用源码
@@ -52,7 +54,7 @@ git clone https://github.com/wu-clan/httpfpt.git
 pip install httpfpt
 ```
 
-## 🧑‍💻 USE / DEV
+## USE / DEV
 
 ### 源码
 

@@ -4,7 +4,7 @@
 详见：[测试用例创建](case_create.md)
 :::
 
-## 🚀 运行方式
+## 运行方式
 
 ### PyCharm (推荐)
 
@@ -31,7 +31,7 @@ cd httpfpt
 python cli.py -r
 ```
 
-## 📖 默认运行参数
+## 默认运行参数
 
 - `*args`: pytest 运行参数，例如：`('-m', 'test_mark')`
 - `testcase_generate`: 自动生成测试用例（跳过同名文件），建议通过 CLI 手动执行，默认关闭
@@ -51,6 +51,6 @@ python cli.py -r
 - `disable_warnings`: 关闭控制台警告信息，默认开启
 - `**kwargs`: pytest 运行关键字参数，通常取决于插件
 
-## 📖 扩展运行参数
+## 扩展运行参数
 
 如果你想手动添加更多 pytest 插件，并且指定它们的运行参数，只需在 main 方法下的 run() 方法中以字符串或键值对形式填入即可
