@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384" role="img" aria-label="HttpFPT logo">
+  <rect x="48" y="48" width="288" height="288" rx="72" fill="#0b0d10"/>
+  <path d="M122 104h140c14 0 22 16 13 27l-28 34c-7 9-18 14-30 14h-57v101h-38V104Z" fill="#f7f7f2"/>
+  <path d="M160 212h87c14 0 22 16 13 27l-27 33c-7 9-18 14-30 14h-43v-74Z" fill="#f7f7f2"/>
+  <path d="M160 136h83l-17 21h-66v-21Z" fill="#0b0d10"/>
+  <path d="M160 243h74l-17 21h-57v-21Z" fill="#0b0d10"/>
+</svg>
