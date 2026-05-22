@@ -1,0 +1,1 @@
+import{c as i,Q as a,j as e,m as t}from"./chunks/framework.uUlyOpUB.js";const v=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"changelog.md","filePath":"changelog.md"}'),r={name:"changelog.md"};function o(h,l,n,u,s,c){return a(),e("div",null,[...l[0]||(l[0]=[t("",58)])])}const b=i(r,[["render",o]]);export{v as __pageData,b as default};

@@ -1,0 +1,1 @@
+import{c as i,Q as a,j as e,m as n}from"./chunks/framework.uUlyOpUB.js";const c=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"auth.md","filePath":"auth.md"}'),t={name:"auth.md"};function l(k,s,h,p,o,r){return a(),e("div",null,[...s[0]||(s[0]=[n("",17)])])}const E=i(t,[["render",l]]);export{c as __pageData,E as default};

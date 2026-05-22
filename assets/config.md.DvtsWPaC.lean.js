@@ -1,0 +1,1 @@
+import{c as o,Q as i,j as l,m as d}from"./chunks/framework.uUlyOpUB.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"config.md","filePath":"config.md"}'),c={name:"config.md"};function t(a,e,r,s,h,p){return i(),l("div",null,[...e[0]||(e[0]=[d("",29)])])}const m=o(c,[["render",t]]);export{u as __pageData,m as default};

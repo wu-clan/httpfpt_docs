@@ -1,0 +1,1 @@
+import{c as l,Q as o,j as t,m as c}from"./chunks/framework.uUlyOpUB.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"assert_type.md","filePath":"assert_type.md"}'),i={name:"assert_type.md"};function d(s,e,a,_,n,r){return o(),t("div",null,[...e[0]||(e[0]=[c("",2)])])}const f=l(i,[["render",d]]);export{m as __pageData,f as default};

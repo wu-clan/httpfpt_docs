@@ -1,0 +1,1 @@
+import{c as e,Q as t,j as r,m as o}from"./chunks/framework.uUlyOpUB.js";const u=JSON.parse('{"title":"常见问题","description":"","frontmatter":{},"headers":[],"relativePath":"questions.md","filePath":"questions.md"}'),l={name:"questions.md"};function i(s,a,n,d,c,h){return t(),r("div",null,[...a[0]||(a[0]=[o("",16)])])}const m=e(l,[["render",i]]);export{u as __pageData,m as default};

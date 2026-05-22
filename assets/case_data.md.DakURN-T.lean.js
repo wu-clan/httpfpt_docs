@@ -1,0 +1,1 @@
+import{c as t,Q as i,j as a,m as l}from"./chunks/framework.uUlyOpUB.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"case_data.md","filePath":"case_data.md"}'),e={name:"case_data.md"};function n(h,s,p,k,d,r){return i(),a("div",null,[...s[0]||(s[0]=[l("",24)])])}const y=t(e,[["render",n]]);export{g as __pageData,y as default};

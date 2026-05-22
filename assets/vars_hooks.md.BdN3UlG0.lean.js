@@ -1,0 +1,1 @@
+import{c as a,Q as i,j as l,m as t}from"./chunks/framework.uUlyOpUB.js";const r=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"vars_hooks.md","filePath":"vars_hooks.md"}'),e={name:"vars_hooks.md"};function p(n,s,h,o,c,k){return i(),l("div",null,[...s[0]||(s[0]=[t("",21)])])}const E=a(e,[["render",p]]);export{r as __pageData,E as default};

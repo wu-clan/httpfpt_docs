@@ -1,0 +1,1 @@
+import{c as s,Q as t,j as e,m as n}from"./chunks/framework.uUlyOpUB.js";const h=JSON.parse('{"title":"多项目","description":"","frontmatter":{},"headers":[],"relativePath":"projects.md","filePath":"projects.md"}'),p={name:"projects.md"};function l(i,a,o,c,r,d){return t(),e("div",null,[...a[0]||(a[0]=[n("",6)])])}const u=s(p,[["render",l]]);export{h as __pageData,u as default};
